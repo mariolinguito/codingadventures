@@ -38,4 +38,8 @@ For now, that's all.
 
 The tech stack is a personal choice. In fact,  I choose **Java** with **Spring-Boot** framework for the back-end, and **Angular** framework for the front-end. 
 
-I could make this project also with Laravel, or with Ruby on Rails because there are so many frameworks and programming language, but the power of an idea is not the programming language you used to make it, but the idea itself and how to implement it and in how many time you introduce it to the market.
+I could make this project also with Laravel, or with Ruby on Rails because there are so many frameworks and programming language, but the power of an idea is not the programming language you used to make it, but the idea itself and how to implement it and in how many time you introduce it to the market.  
+
+In the next article, I will expose the schema of the application, so the workflow that a specific user can follow to create a store and start to sell something. I wouldn't be extremely technic because I do not want to annoying someone with charts or UML diagrams. 
+
+*Best regards guys.*
