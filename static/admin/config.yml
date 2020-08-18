@@ -1,5 +1,7 @@
 backend:
-  name: codingadventures
+  name: github
+  repo: mariolinguito/codingadventures
+  site_domain: codingadventures.netlify.com
 
 media_folder: static/img
 public_folder: /img
