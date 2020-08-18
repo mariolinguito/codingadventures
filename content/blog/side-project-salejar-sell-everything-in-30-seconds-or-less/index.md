@@ -35,5 +35,3 @@ The main features that I want to make for the first release are:
 For now, that's all. 
 
 # Some ugly mockups:
-
-...
