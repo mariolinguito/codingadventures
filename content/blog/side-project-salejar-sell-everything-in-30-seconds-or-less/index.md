@@ -34,4 +34,8 @@ The main features that I want to make for the first release are:
 
 For now, that's all. 
 
-# Java + Angular: simply love!
+## Java + Angular: simply love!
+
+The tech stack is a personal choice. In fact,  I choose **Java** with **Spring-Boot** framework for the back-end, and **Angular** framework for the front-end. 
+
+I could make this project also with Laravel, or with Ruby on Rails because there are so many frameworks and programming language, but the power of an idea is not the programming language you used to make it, but the idea itself and how to implement it and in how many time you introduce it to the market.
