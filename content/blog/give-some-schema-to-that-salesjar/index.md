@@ -5,4 +5,6 @@ description: As I said in the previous post, the last thing that I want is to
   annoying with complicated schema or like, so, there is how I want to build
   Salesjar, simply.
 ---
-Test
+I want to say one thing first of all: I'm improving my Java-Spring-Boot and Angular skills just at this moment, so this blog is also an opportunity for me to improve my tech skills and learn something new, maybe.  
+
+I designed the back-end prototype of the application.
