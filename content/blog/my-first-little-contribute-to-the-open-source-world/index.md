@@ -7,4 +7,4 @@ Since I was ten-years-old I was fascinated by the magic Open Source world, but i
 
 So, over the years I made many things, except to contribute to this world, but today I found the brave to spread something that I wrote and put it on *Drupal Community*.
 
-My choice is dictated by the fact that Drupal is growing right now more than other CMS, and it losing it's CMS identity to become something more, especially with the new version.
+My choice is dictated by the fact that Drupal is growing right now more than other CMS, and it losing it's CMS identity to become something more, especially with the new version. Thanks to this, contribute to this project is perfect for me.
