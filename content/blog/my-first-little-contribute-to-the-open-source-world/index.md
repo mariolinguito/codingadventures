@@ -8,3 +8,11 @@ Since I was ten-years-old I was fascinated by the magic Open Source world, but i
 So, over the years I made many things, except to contribute to this world, but today I found the brave to spread something that I wrote and put it on *Drupal Community*.
 
 My choice is dictated by the fact that Drupal is growing right now more than other CMS, and it losing it's CMS identity to become something more, especially with the new version. Thanks to this, contribute to this project is perfect for me.
+
+## The problem I found
+
+It happens that when I used Drupal view with some contextual filter (Drupal developer know what I mean) with an alias URL, or with query parameters, it is difficult to get these parameters from the URL and use it into your fields or text area, except using Twig, but also, in this case, it is struggling to find and use a complex expressions to get it. 
+
+So, I invented a custom module to get specific GET parameters from the URL, so you can use it into your fields or other. 
+
+It is the simplest project that you can find on Drupal modules directory, but it is a good start to contribute and make something great the next time.
