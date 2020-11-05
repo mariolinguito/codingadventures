@@ -1,7 +1,8 @@
 ---
 title: Do a project is good, learning how to think is better
 date: 2020-11-05T19:53:20.150Z
-description: Do a project is good, learning how to think is better
+description: As I explain in the title of this blog post when I finish a
+  project, I immediately feel satisfied.
 ---
 As I explain in the title of this blog post when I finish a project, I immediately feel satisfied. From the designing to writing code you can learn a lot of things, but with the introduction of the new framework, like **Django**, **Laraver**, **Spring** and new ultra-CMS such as **Drupal 9**, most of the complicated things that before of this you made manually, today you can make it automatically. 
 
@@ -21,4 +22,4 @@ Some resources to start:
 * [Daily Coding Problem](https://www.dailycodingproblem.com/), 
 * [Code With Mario](https://www.youtube.com/channel/UCDpKD0K9Uh9Pgop87d5qgeQ/);
 
-ML
+*Best regards guys.*
