@@ -2,7 +2,7 @@
 title: "Salesjar: sell everything in 30 seconds or less"
 date: 2020-08-18T13:10:01.176Z
 description: My personal side project, Salesjar is a web app that provide a
-  service for who want to sell anything quickly
+  service for who want to sell anything quickly.
 ---
 ## Introduction:
 
