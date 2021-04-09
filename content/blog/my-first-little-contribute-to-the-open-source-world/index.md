@@ -13,8 +13,26 @@ My choice is dictated by the fact that Drupal is growing right now more than oth
 
 ## The problem I found
 
-It happens that when I used Drupal view with some contextual filter (Drupal developer know what I mean) with an alias URL, or with query parameters, it is difficult to get these parameters from the URL and use it into your fields or text area, except using Twig, but also, in this case, it is struggling to find and use complex expressions to get it. 
+Related to contrib project called Bootstrap Italia for Drupal 8 (link [here](https://www.drupal.org/project/bootstrap_italia)) I found a problem: the components! Really, if you want to use the default components that Bootstrap Italia offers you can't in some easy way. 
 
-So, I invented a custom module to get specific GET parameters from the URL, so you can use it into your fields or other. 
+Idea: can I create a contrib module so other people can use it to include Bootstrap components easly into their projects? Of course, yes. In poor words, this is the birth of **Bootstrap Block Italia**.
 
-The structure is simple.
+## How I created the module
+
+It is simple. With Drupal you can define your own block, so you can place it where you want: into Layout Builder or Block Layout. 
+
+So, I taked the Bootstrap Italia components (that are defined in HTML and CSS) and re-make they with TWIG layouts. 
+
+There are some objects to know: 
+
+* *.module file*: with this file I can define a theme for my module, so I can inject dynamic variables to my template,
+* *block files*: with this file I can define the structure of my block, so the fields and the property of the fiels (textfield, textarea, boolean, and so on),
+* *twig files*: the twig file provide the template for specific block, and uses the dynamic variables that the block file inject into it self;
+
+You can see the code on GitLab or on the community page of the module. 
+
+## How I deploy Bootstrap Block Italia
+
+Drupal provide a page where you can create a project easly: [here!](https://www.drupal.org/project/add) 
+
+In that page you can choose the entity of your project: theme, module, or other. Of course, our mission is to create a module project.
