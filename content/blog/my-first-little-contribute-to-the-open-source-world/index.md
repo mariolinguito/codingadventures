@@ -11,6 +11,8 @@ So, over the years I made many things, except to contribute to this world, but t
 
 My choice is dictated by the fact that Drupal is growing right now more than other CMS, and it losing its CMS identity to become something more, especially with the new version. Thanks to this, contribute to this project is perfect for me.
 
+The default language of the module is Italian. But you can translate all the strings from Drupal interface language management page.
+
 ## The problem I found
 
 Related to contrib project called Bootstrap Italia for Drupal 8 (link [here](https://www.drupal.org/project/bootstrap_italia)) I found a problem: the components! Really, if you want to use the default components that Bootstrap Italia offers you can't in some easy way. 
