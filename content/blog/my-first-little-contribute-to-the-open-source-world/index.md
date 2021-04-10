@@ -41,6 +41,5 @@ My project is here: [Bootstrap Block Italia](https://www.drupal.org/project/boot
 
 ## What I learned from this
 
-* How to add composer file to an existing module, 
-* How to submit a module on Packagist, 
+* How to add composer file to an existing module,
 * How to create a project on Drupal Community;
