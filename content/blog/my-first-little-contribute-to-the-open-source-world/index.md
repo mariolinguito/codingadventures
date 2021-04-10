@@ -38,3 +38,9 @@ Drupal provide a page where you can create a project easily: [here!](https://www
 On that page, you can choose the entity of your project: theme, module, or other. Of course, our mission is to create a module project.
 
 My project is here: [Bootstrap Block Italia](https://www.drupal.org/project/bootstrap_block_italia).
+
+## What I learned from this
+
+* How to add composer file to an existing module, 
+* How to submit a module on Packagist, 
+* How to create a project on Drupal Community;
