@@ -37,7 +37,7 @@ Drupal provide a page where you can create a project easily: [here!](https://www
 
 On that page, you can choose the entity of your project: theme, module, or other. Of course, our mission is to create a module project.
 
-My project is here: [Bootstrap Block Italia](https://www.drupal.org/project/bootstrap_block_italia).
+My project is here: [Bootstrap Block Italia](https://www.drupal.org/project/bootstrap_block_italia), while if you want to download the module and use it into your Drupal website, follow this link: [Download!](https://www.drupal.org/project/bootstrap_block_italia/releases/1.0.x-dev)
 
 ## What I learned from this
 
