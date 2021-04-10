@@ -1,7 +1,7 @@
 ---
 title: My first, little, contribute to the Open Source world!
 date: 2021-04-10T13:24:47.319Z
-description: My first, little, contribute to the Open Source world!
+description: My first contrib module for Drupal 8, how I learned from this experience!
 ---
 Instead of a post, this is a note, really.
 
