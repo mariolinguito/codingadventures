@@ -1,5 +1,5 @@
 ---
-title: "Back of Salesjar: development timeline"
+title: "Back of Salesjar: the Layout Builder System"
 date: 2021-04-18T18:16:59.390Z
 description: Salesjar has its layout builder, come to take a look!
 ---
