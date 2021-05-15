@@ -32,3 +32,7 @@ Also, in this page you can check the aggregation of CSS or JS files, or deactiva
 ![settings_cron](settings_cron.png "Settings page for the module")
 
 Another important page is */css_performance_improvement/form/delete_css* where you can manually delete all merged files, so you can re-generated it with the same process explained before.
+
+This is my second module, that you can find here: CSS/JS Performance Improvement. 
+
+Enjoy :-)
