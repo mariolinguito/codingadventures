@@ -19,4 +19,4 @@ The solution exists, and I list them:
   * [Lazy-load](https://www.drupal.org/project/lazy),
   * [Blazy](https://www.drupal.org/project/blazy);
 
-Now, it is time to show! The most important thing
+Now, it is time to show! The most important point is this: during this days I develop a module that aggregates into one or fewer files the CSS and JS files, so your browser need to request much less resources.
