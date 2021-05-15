@@ -13,4 +13,9 @@ My intention isn't to give you a tutorial like *how to use this module, or how t
 The solution exists, and I list them: 
 
 * You can use the contrib module called [Advanced CSS/JS Aggregation](https://www.drupal.org/project/advagg) that helps you with the optimization of CSS and JS that your website needs; the configuration of this module is simple and described well by the documentation,
+* Use *lazyloading* for the images you used into the website, and more important thing, use the *srcset* to adapt these images to the specific devices; there are some modules (stable) that helps you: 
+
+  * [Image SRCSET Formatter](https://www.drupal.org/project/image_srcset_formatter),
+  * [Lazy-load](https://www.drupal.org/project/lazy),
+  * [Blazy](https://www.drupal.org/project/blazy);
 *
