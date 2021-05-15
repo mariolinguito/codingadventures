@@ -12,4 +12,5 @@ My intention isn't to give you a tutorial like *how to use this module, or how t
 
 The solution exists, and I list them: 
 
-* You can use the contrib module called [Advanced CSS/JS Aggregation](https://www.drupal.org/project/advagg) that helps you with the optimization of CSS and JS that your website needs,
+* You can use the contrib module called [Advanced CSS/JS Aggregation](https://www.drupal.org/project/advagg) that helps you with the optimization of CSS and JS that your website needs; the configuration of this module is simple and described well by the documentation,
+*
