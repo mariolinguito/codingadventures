@@ -4,4 +4,6 @@ date: 2021-05-04T09:39:54.205Z
 description: Some tips to increase the performance of your Drupal website. Yes,
   it is simple!
 ---
-When you use a CMS, often you saw that your pages peed (Google) value is lower than you think, but it is a normal thing because you used a CMS to build your website!
+When you use a CMS, often you saw that your pages peed (Google) value is lower than you think, but it is a normal thing because you used a CMS to build your website! 
+
+But our desire is always to see that value at least more than 60-70% for Desktop and 50-60% for mobile (if you consider that more traffic today came from mobile devices).
