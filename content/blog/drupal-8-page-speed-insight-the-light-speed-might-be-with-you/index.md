@@ -20,3 +20,5 @@ The solution exists, and I list them:
   * [Blazy](https://www.drupal.org/project/blazy);
 
 Now, it is time to show! The most important point is this: during this days I develop a module that aggregates into one or fewer files the CSS and JS files, so your browser need to request much less resources.
+
+In particular, the module unify all CSS and non-core JS files into one.
