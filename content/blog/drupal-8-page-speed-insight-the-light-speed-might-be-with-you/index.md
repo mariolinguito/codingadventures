@@ -22,3 +22,7 @@ The solution exists, and I list them:
 Now, it is time to show! The most important point is this: during this days I develop a module that aggregates into one or fewer files the CSS and JS files, so your browser need to request much less resources.
 
 In particular, the module unify all CSS and non-core JS files into one file. In a complex website, the requests came from 56 to 14, and the pagespeed, applying the modules that I cited before came from 30% (mobile) and 45% (desktop) to 65% (mobile) and 88-95% (desktop).
+
+#### How to use CSS/JS Performance Improvement
+
+The module is simple, it have only two configuration pages that you need to setup.
