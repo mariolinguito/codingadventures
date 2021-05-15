@@ -18,4 +18,5 @@ The solution exists, and I list them:
   * [Image SRCSET Formatter](https://www.drupal.org/project/image_srcset_formatter),
   * [Lazy-load](https://www.drupal.org/project/lazy),
   * [Blazy](https://www.drupal.org/project/blazy);
-*
+
+\[...]
