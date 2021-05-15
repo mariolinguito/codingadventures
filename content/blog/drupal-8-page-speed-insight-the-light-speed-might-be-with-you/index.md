@@ -25,4 +25,8 @@ In particular, the module unify all CSS and non-core JS files into one file. In 
 
 #### How to use CSS/JS Performance Improvement
 
-The module is simple, it have only two configuration pages that you need to setup.
+The module is simple, it have only two configuration pages that you need to setup. The first of all is the CRON settings (*/admin/config/css_performance_improvement/cron*) thanks to you can set the number of days that the Drupal cache need to be clear, this is because the cache clearing behave the deletion of the two merged files into */assets/css* and */assets/js*. When these files does not exists, it will be re-generated from the first anonymous user that visit the website.
+
+Also, in this page you can check the aggregation of CSS or JS files, or deactivate it!
+
+![settings_cron](settings_cron.png "Settings page for the module")
