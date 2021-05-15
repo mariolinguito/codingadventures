@@ -19,4 +19,4 @@ The solution exists, and I list them:
   * [Lazy-load](https://www.drupal.org/project/lazy),
   * [Blazy](https://www.drupal.org/project/blazy);
 
-\[...]
+Now, it is time to show! The most important thing
