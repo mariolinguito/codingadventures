@@ -23,7 +23,7 @@ Now, it is time to show! The most important point is this: during these days I d
 
 In particular, the module unifies all CSS and non-core JS files into one file. In a complex website, the requests came from 56 to 14, and the pagespeed, applying the modules that I cited before came from 30% (mobile) and 45% (desktop) to 65% (mobile) and 88-95% (desktop).
 
-#### How to use CSS/JS Performance Improvement
+#### How to use [CSS/JS Performance Improvement](https://www.drupal.org/project/css_js_performance_improvement) (click here)
 
 The module is simple, it has only two configuration pages that you need to set up. The first of all is the CRON settings (*/admin/config/css_js_performance_improvement/cron*) thanks to you can set the number of days that the Drupal cache needs to be clear, this is because the cache clearing behaves the deletion of the two merged files into */sites/default/files/public/css_js_performance_improvement/\[css or js]*. 
 
