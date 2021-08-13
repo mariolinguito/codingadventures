@@ -3,8 +3,7 @@ title: The ovethinking and multiple miracles over the real life
 date: 2021-08-13T07:53:23.935Z
 description: Yesterday I read an article about the "overthinking" problem and
   just four minutes after I read another article about the "miracles" of a
-  startup, and why startups that are based on multiple miracles *de facto* are
-  failing.
+  startup, the two bankruptcy factors.
 ---
 Yesterday I read an article about the "overthinking" problem and just four minutes after I read another article about the "miracles" of a startup, and why startups that are based on multiple miracles *de facto* are failing.
 
