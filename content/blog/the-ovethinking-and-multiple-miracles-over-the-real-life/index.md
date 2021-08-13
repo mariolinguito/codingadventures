@@ -45,4 +45,5 @@ There are other methods to reduce the choice-stress of daily life and not only, 
 
 Sources: 
 
-*
+* https://kerkour.com/blog/overthinking
+* http://blog.eladgil.com/2012/10/startups-miracles.html
