@@ -55,10 +55,43 @@ Another improvement that I make is to limit the indexing of files into the file 
 
 ```php
 /**
-  * {@inheritdoc}
-  */
-  public function updateIndex() {
-    // Interpret the cron limit setting as the maximum number of files to index
+ * {@inheritdoc}
+ */
+public function indexStatus() {
+  $included_cts = $this->moduleSettings->get('ct_machine_name');
+  $included_cts = array_values(explode(',', str_replace(' ', '', $included_cts)));
+  $total = $this->database->query("
+    SELECT COUNT(*) 
+    FROM {file_managed} f 
+    WHERE status = 1 AND f.fid 
+    IN (
+      SELECT fu.fid 
+      FROM file_usage fu LEFT JOIN node n 
+      ON fu.id = n.nid 
+      WHERE n.type 
+      IN (:included_cts[]))', [':included_cts[]' => $included_cts])->fetchField();
+  
+  $remaining = $this->database->query("
+    SELECT COUNT(*) 
+    FROM {file_managed} f LEFT JOIN {search_dataset} sd 
+    ON sd.sid = f.fid AND sd.type = :type 
+    WHERE f.status = 1 AND (sd.sid IS NULL OR sd.reindex <> 0) AND f.fid 
+    IN (
+      SELECT fu.fid 
+      FROM file_usage fu LEFT JOIN node n 
+      ON fu.id = n.nid 
+      WHERE n.type 
+      IN (:included_cts[])
+    )", [':type' => $this->getPluginId(), ':included_cts[]' => $included_cts])->fetchField();
+
+  return array('remaining' => $remaining, 'total' => $total);
+}
+
+/**
+ * {@inheritdoc}
+ */
+public function updateIndex() {
+  // Interpret the cron limit setting as the maximum number of files to index
   // per cron run.
   $limit = (int) $this->searchSettings->get('index.cron_limit');
   $included_cts = $this->moduleSettings->get('ct_machine_name');
