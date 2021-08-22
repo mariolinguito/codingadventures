@@ -17,7 +17,8 @@ The module that I used to accomplish all the three points above is Search File A
 
 In particular, what I made *in plus* for this module is the possibility of the use of a filter it already exists into a view to make a search into the files. For my example, I used the "title" exposed filter on a view to make a search both into content title and files content, to do this I added a hook into the .module file that alters the query that the view makes to display the elements.
 
-<pre><code>/**
+```php
+/**
  * Implements hook_views_query_alter().
  */
 function search_file_attachments_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
@@ -45,7 +46,7 @@ function search_file_attachments_views_query_alter(ViewExecutable $view, QueryPl
     }
   }
 }
-</code></pre>
+```
 
 Of course, the name of the view and filter can be specified from users into the configuration page of the module (I added three more forms for this purpose).
 
