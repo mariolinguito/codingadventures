@@ -162,3 +162,5 @@ In the end, using a contrib module we extended their functionalities to adapt it
 That is the Drupal world, baby!
 
 ### Yes, but show me the goods
+
+![demo of the search in file content](demo_search_content.gif "Demo of the search in file content")
