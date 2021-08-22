@@ -1,5 +1,5 @@
 ---
-title: How to search in files content using Apache Tika and Drupal Views
+title: How to search in files content using Apache Tika and Drupal Content Views
 date: 2021-08-20T15:27:17.719Z
 description: There are some contrib modules for Drupal 8 that make you search
   into the files, all of these uses Apache Tika, which is a framework used for
@@ -17,7 +17,35 @@ The module that I used to accomplish all the three points above is Search File A
 
 In particular, what I made *in plus* for this module is the possibility of the use of a filter it already exists into a view to make a search into the files. For my example, I used the "title" exposed filter on a view to make a search both into content title and files content, to do this I added a hook into the .module file that alters the query that the view makes to display the elements.
 
-\[code hook]
+<pre><code>/**
+ * Implements hook_views_query_alter().
+ */
+function search_file_attachments_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  $config = \Drupal::config('search_file_attachments.settings');
+  $view_machine_name = $config->get('view_machine_name');
+  $filter_machine_name = $config->get('filter_machine_name');
+
+  if ($view->id() === $view_machine_name) {
+    $filter_value = $view->filter[$filter_machine_name]->value;
+
+    if(!empty($filter_value)) {
+      $filter_value = str_replace(' ', '|', $filter_value);
+      $database = \Drupal::database();
+      $file_join = $database->select('file_usage', 'fu');
+      $file_join->join('search_dataset', 'sd', 'fu.fid = sd.sid');
+      $file_join->condition('sd.data', $filter_value, 'REGEXP');
+      $file_join->fields('fu', ['id']);
+      $file_results = $file_join->execute();
+      $ids = array_keys($file_results->fetchAllAssoc('id'));
+
+      if(!empty($ids)) {
+        $in_statement = db_or()->condition('node_field_data.nid', $ids, 'IN');
+        $query->addWhere(2, $in_statement);
+      }
+    }
+  }
+}
+</code></pre>
 
 Of course, the name of the view and filter can be specified from users into the configuration page of the module (I added three more forms for this purpose).
 
