@@ -1,6 +1,6 @@
 ---
 title: How to search in files content using Apache Tika and Drupal Content Views
-date: 2021-08-20T15:27:17.719Z
+date: 2021-08-22T11:00:04.036Z
 description: There are some contrib modules for Drupal 8 that make you search
   into the files, all of these uses Apache Tika, which is a framework used for
   content analysis and detection.
@@ -160,3 +160,7 @@ public function updateIndex() {
 In the end, using a contrib module we extended their functionalities to adapt it to our needs, and this is awesome.
 
 That is the Drupal world, baby!
+
+### Yes, but show me the goods
+
+![demo of the search in file content](demo_search_content.gif "Demo of the search in file content")
