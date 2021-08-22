@@ -55,37 +55,44 @@ Another improvement that I make is to limit the indexing of files into the file 
 
 ```php
 /**
-   * {@inheritdoc}
-   */
+  * {@inheritdoc}
+  */
   public function updateIndex() {
     // Interpret the cron limit setting as the maximum number of files to index
-    // per cron run.
-    $limit = (int) $this->searchSettings->get('index.cron_limit');
-    $included_cts = $this->moduleSettings->get('ct_machine_name');
-    $included_cts = array_values(explode(',', str_replace(' ', '', $included_cts)));
+  // per cron run.
+  $limit = (int) $this->searchSettings->get('index.cron_limit');
+  $included_cts = $this->moduleSettings->get('ct_machine_name');
+  $included_cts = array_values(explode(',', str_replace(' ', '', $included_cts)));
 
-    $result = $this->database->queryRange("SELECT f.fid, MAX(sd.reindex) FROM {file_managed} f LEFT JOIN {search_dataset} sd ON sd.sid = f.fid AND sd.type = :type WHERE sd.sid IS NULL OR sd.reindex <> 0 GROUP BY f.fid HAVING f.fid IN (SELECT fu.fid FROM file_usage fu LEFT JOIN node n ON fu.id = n.nid WHERE n.type IN (:included_cts[])) ORDER BY MAX (sd.reindex) is null DESC, MAX (sd.reindex) ASC, f.fid ASC", 0, $limit, 
-      [
-        ':type' => $this->getPluginId(),
-        ':included_cts[]' => $included_cts,
-      ], [
-        'target' => 'replica'
-    ]);
-    
-    $fids = $result->fetchCol();
+  $result = $this->database->queryRange("
+    SELECT f.fid, MAX(sd.reindex) 
+    FROM {file_managed} f LEFT JOIN {search_dataset} sd 
+    ON sd.sid = f.fid AND sd.type = :type 
+    WHERE sd.sid IS NULL OR sd.reindex <> 0 
+    GROUP BY f.fid HAVING f.fid 
+    IN (
+      SELECT fu.fid 
+      FROM file_usage fu LEFT JOIN node n 
+      ON fu.id = n.nid 
+      WHERE n.type IN (:included_cts[])) 
+      ORDER BY MAX (sd.reindex) is null DESC, MAX (sd.reindex) ASC, f.fid ASC", 
+        0, $limit, 
+        [':type' => $this->getPluginId(), ':included_cts[]' => $included_cts], 
+        ['target' => 'replica']
+  );
 
-    if (!$fids) {
+  $fids = $result->fetchCol();
+
+  if (!$fids) {
       return;
-    }
-
-    $file_storage = $this->entityManager->getStorage('file');
-    foreach ($file_storage->loadMultiple($fids) as $file) {
-      $this->indexFile($file);
-    }
   }
+
+  $file_storage = $this->entityManager->getStorage('file');
+  foreach ($file_storage->loadMultiple($fids) as $file) {
+      $this->indexFile($file);
+  }
+}
 ```
-
-
 
 In the end, using a contrib module we extended their functionalities to adapt it to our needs. That is the Drupal world, baby!
 
