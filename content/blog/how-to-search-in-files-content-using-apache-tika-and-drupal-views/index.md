@@ -70,7 +70,7 @@ public function indexStatus() {
       FROM file_usage fu LEFT JOIN node n 
       ON fu.id = n.nid 
       WHERE n.type 
-      IN (:included_cts[]))', [':included_cts[]' => $included_cts])->fetchField();
+      IN (:included_cts[]))", [':included_cts[]' => $included_cts])->fetchField();
   
   $remaining = $this->database->query("
     SELECT COUNT(*) 
@@ -108,11 +108,12 @@ public function updateIndex() {
       SELECT fu.fid 
       FROM file_usage fu LEFT JOIN node n 
       ON fu.id = n.nid 
-      WHERE n.type IN (:included_cts[])) 
-      ORDER BY MAX (sd.reindex) is null DESC, MAX (sd.reindex) ASC, f.fid ASC", 
-        0, $limit, 
-        [':type' => $this->getPluginId(), ':included_cts[]' => $included_cts], 
-        ['target' => 'replica']
+      WHERE n.type IN (:included_cts[])
+    ) 
+    ORDER BY MAX (sd.reindex) is null DESC, MAX (sd.reindex) ASC, f.fid ASC", 
+    0, $limit, 
+    [':type' => $this->getPluginId(), ':included_cts[]' => $included_cts], 
+    ['target' => 'replica']
   );
 
   $fids = $result->fetchCol();
