@@ -13,9 +13,11 @@ But, before the start, I need to expose my limitations so you can understand why
 2. I need to use the default Drupal search engine, and the default indexing system that it uses,
 3. I need to perform the searching into an existing content view and it has to work with a pre-existent filter on this view;
 
-The module that I used to accomplish all the three points above is Search File Attachments... with some extra functions that I wrote for!
+The module that I used to accomplish all the three points explained above is [Search File Attachments](https://www.drupal.org/project/search_file_attachments)... with some extra functions that I wrote for!
 
 In particular, what I made *in plus* for this module is the possibility of the use of a filter it already exists into a view to make a search into the files. For my example, I used the "title" exposed filter on a view to make a search both into content title and files content, to do this I added a hook into the .module file that alters the query that the view makes to display the elements.
+
+
 
 ```php
 /**
