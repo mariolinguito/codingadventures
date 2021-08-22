@@ -164,5 +164,3 @@ public function updateIndex() {
 
 
 In the end, using a contrib module we extended their functionalities to adapt it to our needs. That is the Drupal world, baby!
-
-ps. I published a patch for this on the module page: here.
