@@ -157,4 +157,6 @@ public function updateIndex() {
 }
 ```
 
-In the end, using a contrib module we extended their functionalities to adapt it to our needs. That is the Drupal world, baby!
+In the end, using a contrib module we extended their functionalities to adapt it to our needs, and this is awesome.
+
+That is the Drupal world, baby!
