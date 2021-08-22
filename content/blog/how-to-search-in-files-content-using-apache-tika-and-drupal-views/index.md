@@ -17,8 +17,6 @@ The module that I used to accomplish all the three points explained above is [Se
 
 In particular, what I made *in plus* for this module is the possibility of the use of a filter it already exists into a view to make a search into the files. For my example, I used the "title" exposed filter on a view to make a search both into content title and files content, to do this I added a hook into the .module file that alters the query that the view makes to display the elements.
 
-
-
 ```php
 /**
  * Implements hook_views_query_alter().
@@ -50,11 +48,43 @@ function search_file_attachments_views_query_alter(ViewExecutable $view, QueryPl
 }
 ```
 
+
+
 Of course, the name of the view and filter can be specified from users into the configuration page of the module (I added three more forms for this purpose).
 
 ![search file attachments form](search_file_attachments_form.png "Search File Attachments Form")
 
-Another improvement that I make is to limit the indexing of files into the file search page (that is the default in Drupal), so if we need to limit the search only on specific files related to specific content types, we can do this altering some queries into a file.
+
+
+The file that I changed, in this case, is *search_file_attachments/src/Form/SearchFileAttachmentsSettingsForm.php* and in particular, I added some input using the same form schema that the module already uses. 
+
+```php
+$form['tika']['search_file_attachments_view_machine_name'] = array(
+  '#type' => 'textfield',
+  '#title' => t('Machine name of the view'),
+  '#default_value' => $config->get('view_machine_name'),
+  '#description' => t('Specify a machine name of a view used for search on files content.'),
+  '#required' => FALSE,
+);
+
+$form['tika']['search_file_attachments_filter_machine_name'] = array(
+  '#type' => 'textfield',
+  '#title' => t('Machine name of the filter'),
+  '#default_value' => $config->get('filter_machine_name'),
+  '#description' => t('Specify a machine name of a filter used for search on files content.'),
+  '#required' => FALSE,
+);
+
+$form['tika']['search_file_attachments_ct_machine_name'] = array(
+  '#type' => 'textfield',
+  '#title' => t('Machine name of the content types'),
+  '#default_value' => $config->get('ct_machine_name'),
+  '#description' => t('Specify a machine name of a content types (separated by comma) used for filter files indexing.'),
+  '#required' => TRUE,
+);
+```
+
+Another improvement (or is better to say, adaptation) that I make is to limit the indexing of files into the file search page (that is the default in Drupal), so if we need to limit the search only on specific files related to specific content types, we can do this altering some queries into a file.
 
 ```php
 /**
@@ -130,6 +160,8 @@ public function updateIndex() {
   }
 }
 ```
+
+
 
 In the end, using a contrib module we extended their functionalities to adapt it to our needs. That is the Drupal world, baby!
 
