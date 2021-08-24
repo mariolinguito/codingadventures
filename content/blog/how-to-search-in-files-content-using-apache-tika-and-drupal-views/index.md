@@ -161,6 +161,8 @@ In the end, using a contrib module we extended their functionalities to adapt it
 
 That is the Drupal world, baby!
 
+I published the patch on the main page of the module: [here, take a look!](https://www.drupal.org/project/search_file_attachments/issues/3229585)
+
 ### Yes, but show me the goods
 
 ![demo of the search in file content](demo_search_content.gif "Demo of the search in file content")
