@@ -18,9 +18,7 @@ After that, I started to think about a custom solution and I divided it into thr
 
 Maybe, the most difficult step is the third, but we go by steps. Note that during the explanation I copy-and-paste some code from my custom module, but you can download the whole code and install the module into your Drupal website. Initially, I published the module on my GitHub profile, and I linked it at the end of this article.
 
-
-
-## Custom table
+## 1. Custom table for tracking
 
 I used a specific hook to create a custom table while module installation, and essentially the code is this:
 
@@ -38,9 +36,7 @@ The only thing that remained to be done is to add this handler into the specific
 
 Every time that a user submits the form, the handler will be triggered and he writes the row with the information into the previous table.
 
-
-
-## Check the user and the content
+## 2. Check the user and the content
 
 The check of the specific user and the content is pretty much simple. Why? Because we only need a hook to works (into module file)
 
@@ -52,9 +48,7 @@ Both variables get the information from the configuration files of the module an
 
 The existence of the row with a specific user id (the current user) and the specific content-id (current content) is guaranteed by the query that we make into the hook.
 
-
-
-## Show the list of the accessible contents
+## 3. Show the list of the accessible contents
 
 Every time that we need to list something in Drupal, we need a view. But, how we can list content with an id that is stored in a custom table?
 
@@ -86,9 +80,7 @@ For this purpose, I added a field with custom text using the Drupal token that m
 
 \[img]
 
-
-
-## Show me the demo!
+## In the end: show me the demo!
 
 Okay, I show you a demo of my environment.
 
