@@ -123,7 +123,7 @@ As you see, with a simple query you can get all the information you need about t
 
 When we navigate to the route */api/webform/contents* we can see the results:
 
-\[img]
+![JSON results of the route](json.png "JSON results of the route")
 
 The last task we should do is to create a view that can show these elements in a pretty form. To do this, we can use a contrib module called **Views Json Source(link)** that makes it possible for a view to using an external source to consume.
 
