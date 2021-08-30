@@ -21,7 +21,43 @@ Maybe, the most difficult step is the third, but we go by steps. Note that durin
 
 I used a specific hook to create a custom table while module installation, and essentially the code is this:
 
-\[code]
+```php
+/**
+ * Creates the tables using the schema API.
+*/
+function webform_content_access_schema() {
+  $schema['webform_content_access_track'] = [
+    'description' => 'Tracking for content access with webform submissions.',
+    'fields' => [
+      'id' => [
+        'description' => 'ID of the row.',
+        'type' => 'serial',
+        'not null' => true,
+      ],
+
+      'id_user' => [
+        'description' => 'ID of the user.',
+        'type' => 'int',
+        'unsigned' => true,
+        'not null' => true,
+        'default' => 0,
+      ],
+
+      'id_content' => [
+        'description' => 'ID of the content.',
+        'type' => 'int',
+        'unsigned' => true,
+        'not null' => true,
+        'default' => 0,
+      ],
+    ],
+
+    'primary key' => ['id', 'id_user', 'id_content'],
+  ];
+
+  return $schema;
+}
+```
 
 The information that the table track is the id (auto-increment column), the id of the specific user that submits the form, and the id of the specific content he wants access to.
 
