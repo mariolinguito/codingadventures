@@ -149,7 +149,6 @@ As you see in the demo, there is a web form for every article, and this is becau
 
 To do this, I added a reference field to the webform, as you can see on the screen: 
 
-
 ![Add webform reference field](add_field_webform.png "Add webform reference field")
 
 So, when I created new content, I choose to use my specific web form (that I created previously, and it can have what fields you want).
