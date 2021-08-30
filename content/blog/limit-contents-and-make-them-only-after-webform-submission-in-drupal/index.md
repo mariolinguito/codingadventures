@@ -95,7 +95,7 @@ Every time that a user submits the form, the handler will be triggered and he wr
 
 ## 2. Check the user and the content
 
-The check of the specific user and the content is pretty much simple. Why? Because we only need a hook to works (into module file)
+The check of the specific user and the content is pretty much simple. Why? Because we only need a hook to works (into module file):
 
 ```php
 /**
