@@ -201,7 +201,7 @@ When we navigate to the route */api/webform/contents* we can see the results:
 
 ![JSON results of the route](json.png "JSON results of the route")
 
-The last task we should do is to create a view that can show these elements in a pretty form. To do this, we can use a contrib module called **Views Json Source(link)** that makes it possible for a view to using an external source to consume.
+The last task we should do is to create a view that can show these elements in a pretty form. To do this, we can use a contrib module called **[Views Json Source](https://www.drupal.org/project/views_json_source)** that makes it possible for a view to using an external source to consume.
 
 So, we need to create a new view (that we called Private Contents) and choose for the view the JSON type. After that we need to specify the route of the endpoint into the advanced tab of the view:
 
