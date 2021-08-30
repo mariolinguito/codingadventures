@@ -157,7 +157,43 @@ webform_content_access.get_my_contents:
 
 While the code of the function of the controller is:
 
-\[code]
+```php
+/**
+   *
+   * @return \Symfony\Component\HttpFoundation\JsonResponse
+   * The formatted JSON response.
+   */
+  public function getMyContents() {
+    $response_array = [];
+    $database = \Drupal::database();
+    $id_user = \Drupal::currentUser()->id();
+
+    $node_query = $database
+      ->select('webform_content_access_track', 'wcat')
+      ->condition('wcat.id_user', $id_user, '=')
+      ->fields('wcat', ['id_content'])
+      ->execute()
+      ->fetchAllAssoc('id_content');
+
+    $node_query = array_keys($node_query);
+
+    if ($node_query) {
+      $nodes = $this->entityTypeManager()->getStorage('node')->loadMultiple($node_query);
+
+      foreach ($nodes as $node) {
+        $response_array[] = [
+          'id' => $node->nid->value,
+          'title' => $node->title->value,
+        ];
+      }
+    } else {
+      $response_array = ['title' => 'No nodes.'];
+    }
+
+    $response = new JsonResponse($response_array);
+    return $response;
+  }
+```
 
 As you see, with a simple query you can get all the information you need about the custom table and the nodes table and return the title of the node. In particular, the query gets only an array of ids related to the contents stored into the custom table, and after the same array is used to load multiple nodes from Drupal tables.
 
