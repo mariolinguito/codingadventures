@@ -131,7 +131,7 @@ function webform_content_access_entity_field_access($operation, \Drupal\Core\Fie
 }
 ```
 
-Let's see the $fields_names and $content_type variables; the first one is an array with all the fields that should be hidden from users that didn't submit the form first, the second one is related to the machine name of the content type to use for the workflow (in this case, the article).
+Let's see the *$fields_names* and *$content_type* variables; the first one is an array with all the fields that should be hidden from users that didn't submit the form first, the second one is related to the machine name of the content type to use for the workflow (in this case, the article).
 
 Both variables get the information from the configuration files of the module and we can edit the values using a configuration form specifically created.
 
