@@ -129,7 +129,7 @@ The last task we should do is to create a view that can show these elements in a
 
 So, we need to create a new view (that we called Private Contents) and choose for the view the JSON type. After that we need to specify the route of the endpoint into the advanced tab of the view:
 
-\[img]
+![Private contents view: advanced tab](private_contents_view.png "Private contents view: advanced tab")
 
 Using the fields we can get the single element of the JSON file and show it in a table (for example).
 
