@@ -89,7 +89,7 @@ class InsertTrackWebformHandler extends WebformHandlerBase {
 
 The only thing that remained to be done is to add this handler into the specific webform settings:
 
-\[GIF]
+![Adding tracking handler to webform](handler_tracking.gif "Adding tracking handler to webform")
 
 Every time that a user submits the form, the handler will be triggered and he writes the row with the information into the previous table.
 
