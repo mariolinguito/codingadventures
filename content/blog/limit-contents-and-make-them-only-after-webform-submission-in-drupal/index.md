@@ -231,4 +231,4 @@ So, when I created new content, I choose to use my specific web form (that I cre
 
 I hope that this article was helpful, and remember that with Drupal you can do everything!
 
-\[LINK TO GITHUB]
+Check the code on my GitHub profile: <https://github.com/mariolinguito/webform_content_access>
