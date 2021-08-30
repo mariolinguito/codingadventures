@@ -148,10 +148,11 @@ Okay, I show you a demo of my environment.
 As you see in the demo, there is a web form for every article, and this is because I added to the content type a reference field to a web form. So, thanks to this field I can choose the webform to display above the content. 
 
 To do this, I added a reference field to the webform, as you can see on the screen: 
-\[IMG]
 
-So, when I created new content, I choose to use my specific web form (that I created previously, and it can have what fields you want).\
-\[IMG]
+
+![Add webform reference field](add_field_webform.png "Add webform reference field")
+
+So, when I created new content, I choose to use my specific web form (that I created previously, and it can have what fields you want).
 
 I hope that this article was helpful, and remember that with Drupal you can do everything!
 
