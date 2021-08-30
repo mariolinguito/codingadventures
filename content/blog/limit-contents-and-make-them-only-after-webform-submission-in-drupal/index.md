@@ -1,7 +1,8 @@
 ---
 title: Contents accessible only after users webform submission in Drupal 8
-date: 2021-08-30T07:59:27.331Z
-description: You can create VIP contents in Drupal using webform and a some line of code.
+date: 2021-08-30T13:48:00.694Z
+description: You can create VIP contents in Drupal using webform and a some line
+  of code (and a view).
 ---
 These days I had a tough nut to crack specifically in Drupal 8 because I need a method to hide some contents (of specific content type) from users that cannot be registered previously using a webform.
 
