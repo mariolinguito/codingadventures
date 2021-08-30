@@ -63,7 +63,29 @@ The information that the table track is the id (auto-increment column), the id o
 
 After the submission (through a handler) the module writes the information into the table. But, how webform submission can be triggered (if not with a hook)? I created a custom handler that makes the work for me, and the code is this:
 
-\[code]
+```php
+class InsertTrackWebformHandler extends WebformHandlerBase {
+
+  /**
+   * {@inheritdoc}
+   */
+
+  // Function to be fired after submitting the Webform.
+  public function postSave(WebformSubmissionInterface $webform_submission, $update = true) {
+    // Get an array of the values from the submission.
+    $values = $webform_submission->getData();
+    $connection = \Drupal::service('database');
+    $id_content = $webform_submission->getSourceEntity()->id();
+    $id_user = \Drupal::currentUser()->id();
+
+    $result = $connection->insert('webform_content_access_track')
+      ->fields([
+        'id_user' => $id_user,
+        'id_content' => $id_content,
+      ])->execute();
+  }
+}
+```
 
 The only thing that remained to be done is to add this handler into the specific webform settings:
 
@@ -101,7 +123,7 @@ As you see, with a simple query you can get all the information you need about t
 
 When we navigate to the route */api/webform/contents* we can see the results:
 
-\[img]
+
 
 The last task we should do is to create a view that can show these elements in a pretty form. To do this, we can use a contrib module called **Views Json Source(link)** that makes it possible for a view to using an external source to consume.
 
