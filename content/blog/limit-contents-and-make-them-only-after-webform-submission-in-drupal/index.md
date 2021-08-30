@@ -97,7 +97,39 @@ Every time that a user submits the form, the handler will be triggered and he wr
 
 The check of the specific user and the content is pretty much simple. Why? Because we only need a hook to works (into module file)
 
-\[code]
+```php
+/**
+ * Implements hook_entity_field_access().
+ */
+function webform_content_access_entity_field_access($operation, \Drupal\Core\Field\FieldDefinitionInterface $field_definition, \Drupal\Core\Session\AccountInterface $account, \Drupal\Core\Field\FieldItemListInterface $items = NULL) {
+  $config = $config = \Drupal::config('webform_content_access.default');
+  $fields_names = explode(',', str_replace(' ', '', $config->get('fields_to_lock')));
+  $content_type = $config->get('content_type_to_lock');
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if(in_array($field_definition->getName(), $fields_names) && $node !== null) {
+    if($node->bundle() === $content_type) {
+      $id_user = \Drupal::currentUser()->id();
+      $id_content = $node->id();
+      $database = \Drupal::database();
+
+      $query = $database
+        ->select('webform_content_access_track', 'wcat')
+        ->condition('wcat.id_user', $id_user, '=')
+        ->condition('wcat.id_content', $id_content, '=')
+        ->countQuery()
+        ->execute()
+        ->fetchField();
+
+      if($query <= 0) {
+        return AccessResult::forbidden();
+      }
+    }
+  }
+
+  return AccessResult::neutral();
+}
+```
 
 Let's see the $fields_names and $content_type variables; the first one is an array with all the fields that should be hidden from users that didn't submit the form first, the second one is related to the machine name of the content type to use for the workflow (in this case, the article).
 
