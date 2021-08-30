@@ -86,6 +86,10 @@ Okay, I show you a demo of my environment.
 
 \[GIF]
 
+As you see in the demo, there is a web form for every article, and this is because I added to the content type a reference field to a web form. So, thanks to this field I can choose the webform to display above the content. 
+
+So, when I created new content, I choose to use my specific web form (that I created previously).
+
 I hope that this article was helpful, and remember that with Drupal you can do everything!
 
 \[LINK TO GITHUB]
