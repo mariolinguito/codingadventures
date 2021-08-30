@@ -135,7 +135,7 @@ Using the fields we can get the single element of the JSON file and show it in a
 
 For this purpose, I added a field with custom text using the Drupal token that makes it possible to use another field value (that is hidden). The results are:
 
-\[img]
+![Private contents table as result](private_contents_table.png "Private contents table as result")
 
 ## In the end: show me the demo!
 
