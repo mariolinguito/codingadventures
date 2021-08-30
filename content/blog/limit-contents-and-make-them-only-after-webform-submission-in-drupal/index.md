@@ -131,7 +131,9 @@ So, we need to create a new view (that we called Private Contents) and choose fo
 
 ![Private contents view: advanced tab](private_contents_view.png "Private contents view: advanced tab")
 
-Using the fields we can get the single element of the JSON file and show it in a table (for example).
+Using the fields we can get the single element of the JSON file and show it in a table. An example can be the following field: 
+
+![JSON field added to the view](json_fields.png "JSON field added to the view")
 
 For this purpose, I added a field with custom text using the Drupal token that makes it possible to use another field value (that is hidden). The results are:
 
