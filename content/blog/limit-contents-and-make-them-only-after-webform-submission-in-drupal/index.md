@@ -145,7 +145,15 @@ Using a custom REST endpoint that in Drupal is created pretty simple using route
 
 The code of the route is:
 
-\[code]
+```yaml
+webform_content_access.get_my_contents:
+ path: 'api/webform/contents'
+ defaults:
+   _controller: '\Drupal\webform_content_access\Controller\RestController::getMyContents'
+ methods: [GET]
+ requirements:
+   _access: 'TRUE'
+```
 
 While the code of the function of the controller is:
 
