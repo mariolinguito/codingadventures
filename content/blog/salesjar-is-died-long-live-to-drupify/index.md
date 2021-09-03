@@ -1,0 +1,6 @@
+---
+title: Salesjar is died, long live to Drupify!
+date: 2021-09-03T11:13:24.683Z
+description: When first time I had the idea of Salesjar...
+---
+When first time I had the idea of Salesjar...
