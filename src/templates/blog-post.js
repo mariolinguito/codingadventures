@@ -44,8 +44,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             border-radius: 10px;
             padding: 15px;
             margin: 25px;
-          }} 
-          dangerouslySetInnerHTML={{ __html: 'I don\'t run ads, and I will never do! If you liked this article, you can <a href="https://www.buymeacoffee.com/codingadventure">buy me a coffee</a>. Thank you :-)' }} />
+          }}
+         >
+          I do not run ads, and I will never do! If you liked this article, you can <a href="https://www.buymeacoffee.com/codingadventure">buy me a coffee</a>. Thank you :-) 
+        </section>
         <hr
           style={{
             marginBottom: rhythm(1),
