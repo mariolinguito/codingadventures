@@ -52,7 +52,7 @@ Of course, the name of the view and filter can be specified from users into the 
 
 ![search file attachments form](search_file_attachments_form.png "Search File Attachments Form")
 
-The file that I changed, in this case, is *search_file_attachments/src/Form/SearchFileAttachmentsSettingsForm.php* and in particular, I added some input using the same form schema that the module already uses. 
+The file that I changed, in this case, is *search\_file\_attachments/src/Form/SearchFileAttachmentsSettingsForm.php* and in particular, I added some input using the same form schema that the module already uses. 
 
 ```php
 $form['tika']['search_file_attachments_view_machine_name'] = array(
@@ -80,7 +80,7 @@ $form['tika']['search_file_attachments_ct_machine_name'] = array(
 );
 ```
 
-Another improvement (or is better to say, adaptation) that I make is to limit the indexing of files into the file search page (that is the default in Drupal), so if we need to limit the search only on specific files related to specific content types, we can do this altering some queries into a file. This piece of code related to the functions at lines 247 and 263 of the file placed in *search_file_attachments/src/Plugin/Search/FileSearch.php*
+Another improvement (or is better to say, adaptation) that I make is to limit the indexing of files into the file search page (that is the default in Drupal), so if we need to limit the search only on specific files related to specific content types, we can do this altering some queries into a file. This piece of code related to the functions at lines 247 and 263 of the file placed in *search\_file\_attachments/src/Plugin/Search/FileSearch.php*
 
 ```php
 /**
