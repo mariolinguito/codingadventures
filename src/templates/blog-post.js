@@ -10,12 +10,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  const buyMeCoffeSection = {
-    backgroundColor: `antiquewhite`;
-    borderRadius: `10px`;
-    padding: `15px`;
-    margin: `25px`;
-  };
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -44,7 +38,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <section style={buyMeCoffeSection}>
+        <section style={{
+          backgroundColor: `antiquewhite`;
+          borderRadius: `10px`;
+          padding: `15px`;
+          margin: `25px`;
+         }}
+        >
           dangerouslySetInnerHTML={{ __html: 'I do not run ads, and I will never do! If you liked this article, you can <a href="https://www.buymeacoffee.com/codingadventure">buy me a coffee</a>. Thank you :-)' }} />
         <hr
           style={{
