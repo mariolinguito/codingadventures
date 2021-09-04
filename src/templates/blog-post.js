@@ -38,6 +38,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section dangerouslySetInnerHTML={{ __html: 'I don\'t run ads, and I will never do! If you liked this article, you can <a href="https://www.buymeacoffee.com/codingadventure">buy me a coffee</a>. Thank you :-)' }} />
         <hr
           style={{
             marginBottom: rhythm(1),
