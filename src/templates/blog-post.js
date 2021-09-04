@@ -38,16 +38,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <section
-          style={{
-            background-color: antiquewhite;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 25px;
-          }}
-         >
-          I do not run ads, and I will never do! If you liked this article, you can <a href="https://www.buymeacoffee.com/codingadventure">buy me a coffee</a>. Thank you :-) 
-        </section>
+        <section style="background-color:antiquewhite;border-radius:10px;padding:15px;margin:25px;">
+          dangerouslySetInnerHTML={{ __html: 'I do not run ads, and I will never do! If you liked this article, you can <a href="https://www.buymeacoffee.com/codingadventure">buy me a coffee</a>. Thank you :-)' }} />
         <hr
           style={{
             marginBottom: rhythm(1),
