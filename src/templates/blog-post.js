@@ -39,10 +39,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <section style={{
-          backgroundColor: `antiquewhite`;
-          borderRadius: `10px`;
-          padding: `15px`;
-          margin: `25px`;
+          backgroundColor: `antiquewhite`,
+          borderRadius: `10px`,
+          padding: `15px`,
+          margin: `25px`,
          }}
         >
           dangerouslySetInnerHTML={{ __html: 'I do not run ads, and I will never do! If you liked this article, you can <a href="https://www.buymeacoffee.com/codingadventure">buy me a coffee</a>. Thank you :-)' }} />
