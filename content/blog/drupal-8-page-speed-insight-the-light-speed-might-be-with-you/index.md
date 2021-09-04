@@ -35,6 +35,4 @@ Also, on this page, you can check the aggregation of CSS or JS files, or deactiv
 
 Another important page is */admin/config/css_js_performance_improvement/form/delete_css* where you can manually delete all merged files, so you can re-generate them with the same process explained before.
 
-This is my second module, which you can find here: CSS/JS Performance Improvement. 
-
 Enjoy :-)
