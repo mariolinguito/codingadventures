@@ -25,7 +25,7 @@ In particular, the module unifies all CSS and non-core JS files into one file. I
 
 #### How to use [CSS/JS Performance Improvement](https://www.drupal.org/project/css_js_performance_improvement) (click here)
 
-The module is simple, it has only two configuration pages that you need to set up. The first of all is the CRON settings (*/admin/config/css_js_performance_improvement/cron*) thanks to you can set the number of days that the Drupal cache needs to be clear, this is because the cache clearing behaves the deletion of the two merged files into */sites/default/files/public/css_js_performance_improvement/\[css or js]*. 
+The module is simple, it has only two configuration pages that you need to set up. The first of all is the CRON settings (*/admin/config/css\_js\_performance\_improvement/cron*) thanks to you can set the number of days that the Drupal cache needs to be clear, this is because the cache clearing behaves the deletion of the two merged files into */sites/default/files/public/css\_js\_performance\_improvement/\[css or js]*. 
 
 When these files do not exist, they will be re-generated from the first anonymous user that visits the website (or based on excluded roles into the configuration).
 
@@ -33,6 +33,6 @@ Also, on this page, you can check the aggregation of CSS or JS files, or deactiv
 
 ![settings_cron](settings_cron.png "Settings page for the module")
 
-Another important page is */admin/config/css_js_performance_improvement/form/delete_css* where you can manually delete all merged files, so you can re-generate them with the same process explained before.
+Another important page is */admin/config/css\_js\_performance\_improvement/form/delete\_css* where you can manually delete all merged files, so you can re-generate them with the same process explained before.
 
 Enjoy :-)
