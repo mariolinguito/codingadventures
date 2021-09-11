@@ -4,4 +4,4 @@ date: 2021-08-31T09:36:09.184Z
 description: Drupal community is great because thanks to it we can improve
   ourselfs and build the think better.
 ---
-Drupal community is great because thanks to it we can improve ourselfs and build the think better.
+## Introduction
