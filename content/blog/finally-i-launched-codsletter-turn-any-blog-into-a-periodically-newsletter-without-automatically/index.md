@@ -1,6 +1,6 @@
 ---
 title: "Finally I launched Codsletter: turn any blog into a periodically
-  newsletter without automatically!"
+  newsletter automatically!"
 date: 2021-09-24T19:06:49.960Z
 description: Today I launched Codsletter, an app that give you the possibility
   to turn automatically your blog into a periodically newsletter.
