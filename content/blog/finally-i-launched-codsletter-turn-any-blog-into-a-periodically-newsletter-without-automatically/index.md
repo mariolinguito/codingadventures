@@ -28,4 +28,4 @@ Why you should use Codsletter? For three main reasons:
 2. If you are a **laziness person** and you want something that makes a good work for less,
 3. It is **free to use**, so you can register yourself and add your website, generate a form and add it to your page;
 
-Thank you for your attention. The project page is this (if you want to contribute) to see how codsletter works: <https://github.com/mariolinguito/codsletter>
+Thank you for your attention. The project page is the followed, if you want to contribute or to see how codsletter works: [Codsletter on GitHub](https://github.com/mariolinguito/codsletter)
