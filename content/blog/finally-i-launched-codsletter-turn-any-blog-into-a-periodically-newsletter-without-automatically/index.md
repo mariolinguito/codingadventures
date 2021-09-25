@@ -1,9 +1,9 @@
 ---
-title: "Finally I launched Codsletter: turn any blog into a periodically
+title: "Finally, I launched Codsletter: turn any blog into a periodical
   newsletter automatically!"
-date: 2021-09-24T19:06:49.960Z
-description: Today I launched Codsletter, an app that give you the possibility
-  to turn automatically your blog into a periodically newsletter.
+date: 2021-09-25T10:42:41.040Z
+description: Today I launched Codsletter, an app that gives you the possibility
+  to turn automatically your blog into a periodical newsletter.
 ---
 Some days before, I added to every post a small "banner" to my BuyMeCoffee page, and it looks great (you can see it at the bottom of this post). But I need more (not money), I need an engagement with my (today small... very small) audience, and because I do not want to insert a comment system to my post (because of performance), I need something other.
 
@@ -28,4 +28,4 @@ Why you should use Codsletter? For three main reasons:
 2. If you are a **laziness person** and you want something that makes a good work for less,
 3. It is **free to use**, so you can register yourself and add your website, generate a form and add it to your page;
 
-Thank you for your attention. The project page is this (if you want to contribute): \[GITHUB]
+Thank you for your attention. The project page is this (if you want to contribute) to see how codsletter works: <https://github.com/mariolinguito/codsletter>
