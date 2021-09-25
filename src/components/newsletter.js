@@ -11,7 +11,7 @@ import { rhythm } from "../utils/typography"
 
 const Newsletter = () => {
 
-  const codsletterURL = "https://codsletter.lndo.site/api/95LmDShoQmeJo/subscribe";
+  const codsletterURL = "https://codsletter.herokuapp.com/api/SORN5rc2tggHC/subscribe";
 
   const initialFormData = Object.freeze({
   	email: "",
