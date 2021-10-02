@@ -51,6 +51,7 @@ const Newsletter = () => {
 				padding: '10px',
 				flex: 'auto',
 				outline: 'none',
+				borderRadius: '0',
 			}}
 	  	required />
 
@@ -64,7 +65,8 @@ const Newsletter = () => {
 				flex: 'auto',
 				cursor: 'pointer',
 			}}
-	  	>Subscribe to my Codsletter</button>
+	  	>Subscribe to my newsletter</button>
+	  	<small>Built with <a href="https://codsletter.herokuapp.com">Codsletter</a></small>
 
 	  	<p 	
 	        	style={{
