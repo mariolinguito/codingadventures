@@ -1,7 +1,7 @@
 ---
-title: "September updates: some about my days"
+title: "September updates: some about my days and what I'm doing right now"
 date: 2021-10-04T08:46:43.798Z
-description: Some of my days about side-projects, how they are going, what I
+description: Some of my days are about side-projects, how they are going, what I
   want to do in the future and what I'm learning just now.
 ---
 ## 1. Deployed Codsletter, how are going?
