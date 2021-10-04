@@ -4,7 +4,7 @@ date: 2021-10-04T08:46:43.798Z
 description: Some of my days about side-projects, how they are going, what I
   want to do in the future and what I'm learning just now.
 ---
-## Deployed Codsletter, how are going?
+## 1. Deployed Codsletter, how are going?
 
 A week ago I deployed and launched Codsletter, a platform that automatizes the newsletter sending for your blog.
 
@@ -25,7 +25,7 @@ The software is completely open-source because I believe in the free and open-so
 
 Regarding the stats, I have some subscribers to my newsletter, but fewer users on the software itself. I hope will be better :-)
 
-## Some symbols for my personality
+## 2. Some symbols for my personality
 
 Recently, at work, I followed a particular course where the introduction was quietly intriguing: the teacher asked us to draw some symbols that express our personalities. You can guess that this is not a simple operation, because you cannot express whole into some symbols, you need an entire universe for this, but we tried anyway.
 
@@ -49,7 +49,7 @@ The calendar because I'm a routine person, so I'm constantly on things, especial
 
 But, as I said at the top of this article, you cannot describe all aspects of your character using some symbol, or using some words; a person is a jumble of things and thinks that we cannot know!
 
-## Kubernetes, I think that I will learn this
+## 3. Kubernetes, I think that I will learn this
 
 In the last period, I begin to learn Kubernetes because of a complete course organized by my company. I find it really interesting and I started to make my own server (using, of course, Linux and in particular Ubuntu Microk8s) so I can do some exercises following the documentation.
 
