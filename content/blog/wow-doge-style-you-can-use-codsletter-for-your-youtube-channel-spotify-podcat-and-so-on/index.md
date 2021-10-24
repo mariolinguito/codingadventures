@@ -11,8 +11,7 @@ Initially, the first thought coming to mind about Codsletter is that it is perfe
 In this post, that seems more a note than an article, I can make some examples about how to use Codsletter for different sources:
 
 * Youtube channel,
-* Spotify podcast,
-* Instagram account;
+* Spotify podcast;
 
 I'm writing this before the updates that I want to release this month about some improvements to the software.
 
@@ -53,18 +52,6 @@ In this case, the title tag is *a.h4*; getting this, you can set the title tag i
 You can see the screen following to see how I made this:
 
 ![Inspect the element on Spotify profile](spotify_inspect.png "Inspect the element on Spotify profile")
-
-## LITTLE BONUS: you can use it also for Instagram...
-
-Ladies and gentlemen, you can use Codsletter also on Instagram.
-
-I don't want to repeat myself, but considering that also an Instagram profile is a list of posts, we can inspect an element and get its title tag, as we made for the first two examples.
-
-In this case, we consider the Instagram profile of Linux Foundation: *<https://www.instagram.com/linux_foundation/?hl=it>*
-
-So, inspecting the element we can get our title tag and use it into Codsletter: *a.div.img* as we can see from the screen:
-
-\[IMG]
 
 ## Conclusion:
 
