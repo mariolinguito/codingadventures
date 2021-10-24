@@ -26,17 +26,17 @@ You can see that all videos are listed on this page, so we can use them as sourc
 
 Fortunately, we can use the fabulous inspector of Firefox (pss. use Firefox instead of Chrome), as you can see in the screen following:
 
-\[IMG]
+![Inspecting the element into Firefox dev tools](youtube_channel_inspect.png "Inspecting the element into Firefox dev tools")
 
 The result is that the title tag is: *a.video-title* because the main tag is *<a>* and the id is *\#video-title*.
 
 At this point, if you know how Codsletter works, you should know that we need to put first the source endpoint into the specific page of the software:
 
-\[IMG]
+![Set the endpoint on Codsletter](website_settings_youtube_channel.png "Set the endpoint on Codsletter")
 
 Then, you should set the title tag into the settings page, plus the other information the software needs to know:
 
-\[IMG]
+![General settings on Codsletter](general_settings_youtube_channel.png "General settings on Codsletter")
 
 Congrats, you can now share the form across the Internet and keep your subscribers up to date on your last videos.
 
@@ -52,7 +52,7 @@ In this case, the title tag is *a.h4*; getting this, you can set the title tag i
 
 You can see the screen following to see how I made this:
 
-\[IMG]
+![Inspect the element on Spotify profile](spotify_inspect.png "Inspect the element on Spotify profile")
 
 ## LITTLE BONUS: you can use it also for Instagram...
 
