@@ -112,3 +112,5 @@ We are *extremely* lucky because there are no errors to know for this module, bu
 In the end, I want to say that this is an extremely important and powerful tool that every developer need to use. I found it some days ago, but I think that I will use it even when I will make a new module.
 
 I use this moment to study this tool and make changes to my module that I need to do some time ago, but I have no time for anything in this period, unfortunately. Yet I want to start a new way of improvement of my code using tools and best practices, so I think I will use this tool also on [Codsletter](https://codsletter.herokuapp.com/) (my last project built with Laravel).
+
+You can check the changes I made on both modules on their official page on Drupal.org!
