@@ -93,15 +93,15 @@ Perfect, we are ready for the next adventure: fixing the last file of this modul
 
 We are lucky, because of the experience of the second file, we can fix the last one simply.
 
-\[IMG]
+![The output of PHPStan reported no errors](no_errors.png "The output of PHPStan reported no errors")
 
 In the end, we killed all the problems!
 
 ## Go to the second project!
 
-I made a second Drupal module that we can check with the same tool, its name is **Bootstrap Block Italia** (link here).
+I made a second Drupal module that we can check with the same tool, its name is **Bootstrap Block Italia** (link on [Drupal page](https://www.drupal.org/project/bootstrap_block_italia)).
 
-This module is simpler than the first module I made because it provides only some custom block based on a contrib theme called **Bootstrap Italia** provided by *Arturo Panetta* (I thank you so much).
+This module is simpler than the first module I made because it provides only some custom block based on a contrib theme called **Bootstrap Italia** provided by [Arturo Panetta](https://www.drupal.org/u/arturopanetta) (I thank you so much).
 
 After the downloading and installation of the module, we need to lunch the same command also for this.
 
@@ -111,4 +111,4 @@ We are *extremely* lucky because there are no errors to know for this module, bu
 
 In the end, I want to say that this is an extremely important and powerful tool that every developer need to use. I found it some days ago, but I think that I will use it even when I will make a new module.
 
-I use this moment to study this tool and make changes to my module that I need to do some time ago, but I have no time for anything in this period, unfortunately. Yet I want to start a new way of improvement of my code using tools and best practices, so I think I will use this tool also on Codsletter (my last project built with Laravel).
+I use this moment to study this tool and make changes to my module that I need to do some time ago, but I have no time for anything in this period, unfortunately. Yet I want to start a new way of improvement of my code using tools and best practices, so I think I will use this tool also on [Codsletter](https://codsletter.herokuapp.com/) (my last project built with Laravel).
