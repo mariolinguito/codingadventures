@@ -2,14 +2,13 @@
 title: "How to use PHPStan on your Drupal module: a practical example of mine"
 date: 2021-10-31T18:12:18.073Z
 description: Today some tools help us to write better code and avoid logic
-  errors, consequently avoiding bugs. One of these tools is **PHPStan** (link
-  here), an open-source (just for this you should love it) and free-to-use (it
-  has also a premium version) PHP static analysis tool that aims to make your
-  code better.
+  errors, consequently avoiding bugs. One of these tools is **PHPStan**, an
+  open-source (just for this you should love it) and free-to-use (it has also a
+  premium version) PHP static analysis tool that aims to make your code better.
 ---
-Today some tools help us to write better code and avoid logic errors, consequently avoiding bugs. One of these tools is **PHPStan** (link here), an open-source (just for this you should love it) and free-to-use (it has also a premium version) PHP static analysis tool that aims to make your code better.
+Today some tools help us to write better code and avoid logic errors, consequently avoiding bugs. One of these tools is **[PHPStan](https://github.com/phpstan/phpstan)**, an open-source (just for this you should love it) and free-to-use (it has also a premium version) PHP static analysis tool that aims to make your code better.
 
-As you can use PHPStan for PHP code, you can use it also for your Drupal module, and the luck wants that someone on the magical world of the Internet made integration of PHPStan in Drupal. This someone has a name: Matt Glaman, a developer that sometimes makes videos and writes on his blog (you can find it here).
+As you can use PHPStan for PHP code, you can use it also for your Drupal module, and the luck wants that someone on the magical world of the Internet made integration of PHPStan in Drupal. This someone has a name: Matt Glaman, a developer that sometimes makes videos and writes on his blog (you can find it [here](https://mglaman.dev/)).
 
 Thanks to his work, I used PHPStan to analyse my code and projects published on my Drupal profile. You can find my two articles related to these modules on this blog.
 
