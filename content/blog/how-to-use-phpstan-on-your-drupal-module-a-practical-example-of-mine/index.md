@@ -128,9 +128,10 @@ With the changes I made to the file, that I write here, I'm following the best p
 
   // again, other stuffs
   // [...]
+
   // now we can call, for example, the attribute as: 
-  // $this->defaultService->remove_all_folder_files(...)
-  // $this->fileSystem->realpath(...)
+  #  $this->defaultService->remove_all_folder_files(...)
+  #  $this->fileSystem->realpath(...)
 ```
 
 The last warning we have on this file is more a suggestion than a report: *Unsafe usage of new static()* followed by a link that you can consult to solve your problem fast. In fact, the only thing that I made for this file is to set the class *final*. Remember that a *final* class cannot be extended.
