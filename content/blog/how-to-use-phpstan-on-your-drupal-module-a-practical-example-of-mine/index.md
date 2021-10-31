@@ -1,8 +1,8 @@
 ---
 title: "How to use PHPStan on your Drupal module: a practical example of mine"
-date: 2021-10-31T18:12:18.073Z
+date: 2021-10-31T19:45:53.395Z
 description: Today some tools help us to write better code and avoid logic
-  errors, consequently avoiding bugs. One of these tools is **PHPStan**, an
+  errors, consequently avoiding bugs. One of these tools is PHPStan, an
   open-source (just for this you should love it) and free-to-use (it has also a
   premium version) PHP static analysis tool that aims to make your code better.
 ---
