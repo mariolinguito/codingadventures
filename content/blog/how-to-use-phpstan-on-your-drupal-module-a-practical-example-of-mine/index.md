@@ -23,27 +23,33 @@ We can use PHPStan simply using composer, and if you know how to manage and make
 
 So, the first thing we should do is to install PHPStan (and its dependencies) on our project, using the previously cited composer:
 
-\[CODE]
+```shell
+composer require  --dev phpstan/phpstan \
+  phpstan/extension-installer \
+  mglaman/phpstan-drupal \
+  phpstan/phpstan-deprecation-rules
+```
 
-After that, we need to define a configuration file to fit our requirements about the module we need to test and eventually fix. This file is called *phpstan.neon* and based on the documentation (that you can find here), you need this file in complex scenarios that you cannot cover with command-line only. The format it uses is NEON (link here) which is similar to the YAML format (used by Drupal modules and configurations, so it is familiar for Drupal developers).
+After that, we need to define a configuration file to fit our requirements about the module we need to test and eventually fix. This file is called *phpstan.neon* and based on the documentation (that you can find here), you need this file in complex scenarios that you cannot cover with command-line only. The format it uses is NEON (follow this [link](https://ne-on.org/) if you want to know more) which is similar to the YAML format (used by Drupal modules and configurations, so it is familiar for Drupal developers).
 
 If a neon file was defined before in the current working directory, so PHPStan will recognize it automatically and use it.
 
 In this case, I'm using the simple *phpstan.neon* file and not *phpstan.neon.dist*, that is preferred in a versioned context (using GIT, for example). The source code of the file is:
 
-\[CODE]
+```yaml
+parameters:
+	level: 5
+```
 
-As you can see, my configuration file is pretty simple; it defines only a level of the check. The software itself define 0 as the lowest level of controls, and 9 as the highest. I don't want to tell you now what every level checks because you can read this information on the documentation (this is the link).
+As you can see, my configuration file is pretty simple; it defines only a level of the check. The software itself define 0 as the lowest level of controls, and 9 as the highest. I don't want to tell you now what every level checks because you can read this information on the documentation (this is the [link](https://phpstan.org/user-guide/rule-levels) to follow if you want to go deeper).
 
 ## Check some errors in my code
 
-Well, we are ready to check some errors in the code. The first module that I want to analyze is **CSS/JS Performance Improvement** (you can find it here) and the command-dragon-line to lunch is:
+Well, we are ready to check some errors in the code. The first module that I want to analyze is **CSS/JS Performance Improvement** (you can find it [here](https://www.drupal.org/project/css_js_performance_improvement)) and the command-dragon-line to lunch is:
 
-\[CODE]
-
-While the output is this:
-
-\[SCREEN]
+```shell
+vendor/bin/phpstan analyze web/modules
+```
 
 Of course, we have some errors to handle and fix for the modules created previously. So let's roll up our sleeves and begin to fix something broken.
 
