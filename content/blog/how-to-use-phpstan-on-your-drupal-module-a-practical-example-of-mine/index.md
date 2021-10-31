@@ -58,7 +58,7 @@ The simplest thing that the software reported to me is the *variable not found o
 
 The software also reported to me some deprecated lines of code, for example, the *path.alias_manager* that now is *path_alias.manager* so we can make a substitution of the line with the new one.
 
-Well, until now there was a simple solution to a simple problem. Another thing that we should resolve is the deprecated function *drupal_set_message*. I love the fact that the Internet gives me a solution to almost everything especially about Drupal, one of the most important and powerful content management frameworks. I found a really useful list of examples about how to use the new *addMessage* function in Drupal.
+Well, until now there was a simple solution to a simple problem. Another thing that we should resolve is the deprecated function *drupal_set_message*. I love the fact that the Internet gives me a solution to almost everything especially about Drupal, one of the most important and powerful content management frameworks. I found ([this](https://gist.github.com/signalpoint/40a3add1ccc385c558606353ebdcde00)) a really useful list of examples about how to use the new *addMessage* function in Drupal.
 
 ```php
 <?php
@@ -76,15 +76,62 @@ Well, until now there was a simple solution to a simple problem. Another thing t
 
 // In a Drupal 8 Form's submitForm() handler:
 $this->messenger()->addMessage($this->t('Hello world.'));
+
+// Add specific type of message.
+$this->messenger()->addMessage('Hello world', 'custom');
+$this->messenger()->addError('Hello world');
+$this->messenger()->addStatus('Hello world');
+$this->messenger()->addWarning('Hello world');
 ```
 
-Thanks to this snippet, now I can replace all deprecated functions with this new one.
+Thanks to this snippet, now I can replace all deprecated functions (related to the message function) with this new one.
 
 Wow! Another problem was fixed. So, we are ready for the module file (of course we need to test the whole module to be sure that everything is working well).
 
 The second file that gives me problems is *DeleteCSS.php*; the most reported error is *\Drupal calls should be avoided in classes, use dependency injection instead* and I'm afraid to say that yes, my gosh, you are tremendously right my little and dear PHPStan. To fix this problem I have to make some changes to my files, but these are useful to make the code more securely!
 
 With the changes I made to the file, that I write here, I'm following the best practices of Drupal development, so instead of using *\Drupal* calls, now I'm using the injection. Yes, I lost some of my time understanding how to refactor my code, but in the end, I have not almost any errors.
+
+```php
+<?php
+
+  // other stuffs
+  // [...]
+
+  /**
+   * @var FileSystemInterface $fileSystem
+   */
+  protected $fileSystem;
+
+  /**
+   * @var DefaultService $defaultService
+   */
+   protected $defaultService;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct(FileSystemInterface $file_system, DefaultService $default_service) {
+    $this->fileSystem = $file_system;
+    $this->defaultService = $default_service;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('file_system'),
+      $container->get('css_js_performance_improvement.default')
+    );
+  }
+
+  // again, other stuffs
+  // [...]
+  // now we can call, for example, the attribute as: 
+  // $this->defaultService->remove_all_folder_files(...)
+  // $this->fileSystem->realpath(...)
+```
 
 The last warning we have on this file is more a suggestion than a report: *Unsafe usage of new static()* followed by a link that you can consult to solve your problem fast. In fact, the only thing that I made for this file is to set the class *final*. Remember that a *final* class cannot be extended.
 
