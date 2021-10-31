@@ -17,8 +17,6 @@ Thanks to his work, I used PHPStan to analyse my code and projects published on 
 
 If you want to learn how to use PHPStan massively and more completely, you can check the official documentation whose links are scattered in this blog post.
 
-
-
 ## How to use PHPStan with Drupal
 
 We can use PHPStan simply using composer, and if you know how to manage and make modules for Drupal, you already had to have an affair with the composer package manager.
@@ -36,8 +34,6 @@ In this case, I'm using the simple *phpstan.neon* file and not *phpstan.neon.dis
 \[CODE]
 
 As you can see, my configuration file is pretty simple; it defines only a level of the check. The software itself define 0 as the lowest level of controls, and 9 as the highest. I don't want to tell you now what every level checks because you can read this information on the documentation (this is the link).
-
-
 
 ## Check some errors in my code
 
@@ -59,7 +55,23 @@ The software also reported to me some deprecated lines of code, for example, the
 
 Well, until now there was a simple solution to a simple problem. Another thing that we should resolve is the deprecated function *drupal_set_message*. I love the fact that the Internet gives me a solution to almost everything especially about Drupal, one of the most important and powerful content management frameworks. I found a really useful list of examples about how to use the new *addMessage* function in Drupal.
 
-\[CODE SNIPPETS]
+```php
+<?php
+
+// The drupal_set_message() function is being deprecated!
+// @see https://api.drupal.org/api/drupal/core%21includes%21bootstrap.inc/function/drupal_set_message/8.5.x
+// > Deprecated in Drupal 8.5.0 and will be removed before Drupal 9.0.0.
+// > Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead.
+
+// In some custom code.
+\Drupal::messenger()->addMessage('Say something else');
+
+// When trying to print out a simple var.
+\Drupal::messenger()->addMessage(print_r($stuff, TRUE));
+
+// In a Drupal 8 Form's submitForm() handler:
+$this->messenger()->addMessage($this->t('Hello world.'));
+```
 
 Thanks to this snippet, now I can replace all deprecated functions with this new one.
 
@@ -79,8 +91,6 @@ We are lucky, because of the experience of the second file, we can fix the last 
 
 In the end, we killed all the problems!
 
-
-
 ## Go to the second project!
 
 I made a second Drupal module that we can check with the same tool, its name is **Bootstrap Block Italia** (link here).
@@ -90,8 +100,6 @@ This module is simpler than the first module I made because it provides only som
 After the downloading and installation of the module, we need to lunch the same command also for this.
 
 We are *extremely* lucky because there are no errors to know for this module, but we need to change something: the core compatibility just because Arturo Panetta made this module compatible with Drupal 9.
-
-
 
 ## Conclusion
 
