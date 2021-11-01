@@ -158,6 +158,18 @@ With the changes I made to the file, that I write here, I'm following the best p
 
 The last warning we have on this file is more a suggestion than a report: *Unsafe usage of new static()* followed by a link that you can consult to solve your problem fast. In fact, the only thing that I made for this file is to set the class *final*. Remember that a *final* class cannot be extended.
 
+The *services* file, of course, should be changed with a new argument to use the file system interface: 
+
+```yaml
+services:
+  logger.channel.css_js_performance_improvement:
+    parent: logger.channel_base
+    arguments: ['css_js_performance_improvement']
+  css_js_performance_improvement.default:
+    class: Drupal\css_js_performance_improvement\Service\DefaultService
+    arguments: ['@file_system'] # we injected the new argument here...
+```
+
 Perfect, we are ready for the next adventure: fixing the last file of this module. But if we see with attention the errors, we will notice that all of them are similar to the previous errors we solved. In particular, in this case, we need to switch from an incorrect implementation of a service to an injection method.
 
 We are lucky, because of the experience of the second file, we can fix the last one simply.
