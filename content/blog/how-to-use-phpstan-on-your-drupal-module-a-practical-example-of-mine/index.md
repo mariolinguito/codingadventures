@@ -52,6 +52,10 @@ vendor/bin/phpstan analyze web/modules
 
 Of course, we have some errors to handle and fix for the modules created previously. So let's roll up our sleeves and begin to fix something broken.
 
+Here the errors:
+
+![A very scary list of errors](errors_found_phpstan.png "A very scary list of errors")
+
 ## The process of fixing some sh*t
 
 The simplest thing that the software reported to me is the *variable not found or defined* at line 50 of the module file. The variable related to service (that I used to make some operations on folders and files) is not defined in the hook. Pretty simple, I defined the same variable that I just used into another hook.
