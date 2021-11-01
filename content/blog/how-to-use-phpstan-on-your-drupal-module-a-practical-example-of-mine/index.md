@@ -186,6 +186,4 @@ You can check the changes I made on both modules on their official page on Drupa
 
 ## Note
 
-While I'm writing this article, the creator of PHPStan just released the new version. So, if you have problems with the version, you should specify the version on every composer require commands (Packagist is your best friend, like Google or DuckDuckGo).
-
-![Tweet about PHPStan new version](tweet_phpstan.png "Tweet about PHPStan new version")
+While I'm writing this article, the creator of PHPStan just released the [new version](https://twitter.com/OndrejMirtes/status/1455070385049948165?s=20). So, if you have problems with the version, you should specify the version on every composer require commands (Packagist is your best friend, like Google or DuckDuckGo).
