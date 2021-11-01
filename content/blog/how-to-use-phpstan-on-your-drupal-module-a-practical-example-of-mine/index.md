@@ -79,8 +79,14 @@ $this->messenger()->addMessage($this->t('Hello world.'));
 
 // Add specific type of message.
 $this->messenger()->addMessage('Hello world', 'custom');
+
+// Add error message.
 $this->messenger()->addError('Hello world');
+
+// Add status message.
 $this->messenger()->addStatus('Hello world');
+
+// Add warning message.
 $this->messenger()->addWarning('Hello world');
 ```
 
