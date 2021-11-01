@@ -161,3 +161,9 @@ In the end, I want to say that this is an extremely important and powerful tool 
 I use this moment to study this tool and make changes to my module that I need to do some time ago, but I have no time for anything in this period, unfortunately. Yet I want to start a new way of improvement of my code using tools and best practices, so I think I will use this tool also on [Codsletter](https://codsletter.herokuapp.com/) (my last project built with Laravel).
 
 You can check the changes I made on both modules on their official page on Drupal.org!
+
+## Note
+
+While I'm writing this article, the creator of PHPStan just released the new version. So, if you have problems with the version, you should specify the version on every composer require commands (Packagist is your best friend, like Google or DuckDuckGo).
+
+![Tweet about PHPStan new version](tweet_phpstan.png "Tweet about PHPStan new version")
