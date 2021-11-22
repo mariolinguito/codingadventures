@@ -74,7 +74,7 @@ Fortunately, Github has made the process of creation of webhooks more easily tha
 
 The events I want to hook are the *push* and *pull requests* on the main branch*.* There are a lot of events we can trigger, but for now, we have a simplified context (in a real-world application, maybe you will check more options).
 
-\[IMG]
+![Webhooks for a Github repository](screenshot_2021_11_22_at_17_45_21_webhook_·_https_soft_lizard_72.png "Webhooks for a Github repository ")
 
 ## Conclusion: Okay, what we have done?
 
