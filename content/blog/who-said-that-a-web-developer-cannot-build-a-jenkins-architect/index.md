@@ -1,5 +1,5 @@
 ---
-title: "Drupal loves Jenkins: auto-deployment with a simple freestyle project"
+title: "Drupal loves Jenkins: auto-deployment with a simple freestyle project..."
 date: 2021-11-22T18:05:48.242Z
 description: "During these days, I'm thinking about Drupal development and how
   to make deployments more efficient and fast, and something comes to my mind:
