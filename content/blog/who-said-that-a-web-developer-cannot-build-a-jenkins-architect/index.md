@@ -1,6 +1,6 @@
 ---
 title: "Drupal loves Jenkins: auto-deployment with a simple freestyle project"
-date: 2021-11-22T16:45:56.584Z
+date: 2021-11-22T18:05:48.242Z
 description: "During these days, I'm thinking about Drupal development and how
   to make deployments more efficient and fast, and something comes to my mind:
   Jenkins."
@@ -171,3 +171,7 @@ The following GIF show how the whole process start and end (I'm pushing directly
 Practically, every time that we push on the main branch or make a merging of some branch to the main since *webhooks allow external services to be notified when certain events happen* it makes a POST request to the specific URL we set before, and start a build into Jenkins job that make some things, the things that we specified into the script.
 
 In conclusion, we can say that a developer needs to know Jenkins and need to broaden horizons to discover a new way to make things done. I'm a developer right down to the marrow, I love to see the backside of everything and I love to work as a back-end developer, but I need to know also how certain things works that are outside to the *"web development world"*.
+
+Hey, there is a resource that you can see: 
+
+* [Drupal 8 Deployments with Jenkins, GitHub & Slack](https://chromatichq.com/insights/drupal-8-deployments-jenkins-github-slack)
