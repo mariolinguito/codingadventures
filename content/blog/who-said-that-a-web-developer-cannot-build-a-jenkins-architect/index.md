@@ -41,13 +41,52 @@ After the starting of the Jenkins service, we will redirect to the installation 
 
 Firstly, in the action to do for the job I put my script for Drupal deployment, it is pretty simple.
 
-\[SCRIPT]
+```shell
+#!/bin/bash
+
+echo "---"
+echo "Switching to project docroot"
+cd $WORKING_DIR
+echo "---"
+echo "Pulling down the latest code"
+git checkout main
+git pull
+echo "---"
+echo "Running composer install"
+composer install
+echo "---"
+echo "Enable eventually new modules"
+export MODULES_NAME=$(cat modules_to_enable.txt)
+if [ -z "$MODULES_NAME" ]
+then
+      echo "Nothing to install"
+else
+      echo "Installing new modules"
+      vendor/bin/drush en $MODULES_NAME -yes
+fi
+echo "---"
+echo "Setting email and name for git"
+git config --global user.email $GIT_EMAIL
+git config --global user.name $GIT_NAME
+echo "---"
+echo "Clearing drush caches"
+vendor/bin/drush cr
+echo "---"
+echo "Running database updates"
+vendor/bin/drush updb -y
+echo "---"
+echo "Importing configuration"
+vendor/bin/drush cim -y
+echo "---"
+echo "Clearing caches"
+vendor/bin/drush cr
+echo "---"
+echo "Deployment completed"
+```
 
 It is simple because it is what I do every time that I need to deploy a change or a feature. It is parameterized with some variables that I defined previously in Jenkins, as the path or my application, and so on. There are some parameters defined in it, this is because we define the same parameters into Jenkins project settings to make the whole project as dynamic as possible.
 
 That's it! With this configuration and Jenkins running, we can build our environment by just pressing a button (since we defining parameters the button become **Build with parameters**) and see that everything just works.
-
-\[IMG]
 
 But, we have two problems:
 
@@ -58,7 +97,52 @@ For the first problem, we described the solution in the point itself, so, as I s
 
 So, the script becomes this:
 
-\[SCRIPT]
+```shell
+#!/bin/bash
+
+echo "---"
+echo "Switching to project docroot"
+cd $WORKING_DIR
+echo "---"
+echo "Pulling down the latest code"
+git checkout main
+git pull
+echo "---"
+echo "Running composer install"
+composer install
+echo "---"
+echo "Enable eventually new modules"
+export MODULES_NAME=$(cat modules_to_enable.txt)
+if [ -z "$MODULES_NAME" ]
+then
+      echo "Nothing to install"
+else
+      echo "Installing new modules"
+      vendor/bin/drush en $MODULES_NAME -yes
+      rm modules_to_enable.txt
+      git add .
+      git commit -m "modules_to_enable.txt file removed"
+      cat $USER_PASSWORD | git push https://$USER_ID@github.com/mariolinguito/drupal-jenkins.git
+fi
+echo "---"
+echo "Setting email and name for git"
+git config --global user.email $GIT_EMAIL
+git config --global user.name $GIT_NAME
+echo "---"
+echo "Clearing drush caches"
+vendor/bin/drush cr
+echo "---"
+echo "Running database updates"
+vendor/bin/drush updb -y
+echo "---"
+echo "Importing configuration"
+vendor/bin/drush cim -y
+echo "---"
+echo "Clearing caches"
+vendor/bin/drush cr
+echo "---"
+echo "Deployment completed"
+```
 
 We cannot leave this file on the repository after we used it, so we need to push the change we made (the deletion of the file). If we push something, Github asks for a username and password, and Jenkins already know this information because we used credentials to connect Jenkins and Github. So, the only thing to do is to check the option *"Use secret text(s) or file(s)",* choosing what is the credentials to use, and using **$USER_ID** and **$USER_PASSWORD** token to make the push (in the script).
 
