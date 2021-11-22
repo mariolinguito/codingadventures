@@ -31,7 +31,7 @@ I will not explain how to install Drupal or Jenkins because it is not the main t
 
 At the end of this step, we have a Drupal 9 hosted on Github, this is the link: \[GITHUB]
 
-## Configure the Jenkins: our great butler
+### Configure the Jenkins: our great butler
 
 As in every thriller story, the butler is the kidnapper... I'm kidding now, installing Jenkins is simple and fast; it became more difficult if you are on a new machine (like my virtual machine) because you need to download OpenJDK from the official website (since I'm using Linux, it is a single command).
 
@@ -64,7 +64,7 @@ We cannot leave this file on the repository after we used it, so we need to push
 
 For the second problem, we have the following paragraph.
 
-## Configuring GitHub with webhooks
+### Configuring GitHub with webhooks
 
 The first problem I should face: I'm in localhost, I haven't a remote environment (for now) that I can use to work with, but webhooks need a remote endpoint. Well, in the past I had this problem but for another task: how can I expose my localhost to someone (for tests, an example)? I used ngrok in the past, but through the years I found another tool called **Localtunnel**.
 
