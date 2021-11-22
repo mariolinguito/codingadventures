@@ -172,6 +172,8 @@ Practically, every time that we push on the main branch or make a merging of som
 
 In conclusion, we can say that a developer needs to know Jenkins and need to broaden horizons to discover a new way to make things done. I'm a developer right down to the marrow, I love to see the backside of everything and I love to work as a back-end developer, but I need to know also how certain things works that are outside to the *"web development world"*.
 
-Hey, there is a resource that you can see: 
+Sources: 
 
 * [Drupal 8 Deployments with Jenkins, GitHub & Slack](https://chromatichq.com/insights/drupal-8-deployments-jenkins-github-slack)
+
+Let see on Github if you are some improvements to push ;-)
