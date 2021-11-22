@@ -1,5 +1,5 @@
 ---
-title: Who said that a web developer cannot build a Jenkins architect?
+title: "Drupal loves Jenkins: auto-deployment with a simple freestyle project"
 date: 2021-11-22T16:45:56.584Z
 description: "During these days, I'm thinking about Drupal development and how
   to make deployments more efficient and fast, and something comes to my mind:
