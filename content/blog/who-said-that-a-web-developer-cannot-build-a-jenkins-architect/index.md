@@ -39,7 +39,9 @@ After the starting of the Jenkins service, we will redirect to the installation 
 
 ![My Jenkins project configuration](screenshot-2021-11-22-at-15-05-08-drupal9-config-jenkins-.png "My Jenkins project configuration")
 
-Firstly, in the action to do for the job I put my script for Drupal deployment, it is pretty simple.
+As you can see, there are a lot of things (including variables that I can use into my script and credentials that I can use to connect Jenkins and Github), and in particular, in the action to do for the job I put my script for Drupal deployment. 
+
+It is pretty simple.
 
 ```shell
 #!/bin/bash
@@ -84,7 +86,7 @@ echo "---"
 echo "Deployment completed"
 ```
 
-It is simple because it is what I do every time that I need to deploy a change or a feature. It is parameterized with some variables that I defined previously in Jenkins, as the path or my application, and so on. There are some parameters defined in it, this is because we define the same parameters into Jenkins project settings to make the whole project as dynamic as possible.
+It is simple because it is what I do every time that I need to deploy a change or a feature. It is parameterized with some variables (as I said before) that I defined previously in Jenkins, as the path or my application, and so on. This is because I want to make the whole project as dynamic as possible.
 
 That's it! With this configuration and Jenkins running, we can build our environment by just pressing a button (since we defining parameters the button become **Build with parameters**) and see that everything just works.
 
@@ -150,7 +152,7 @@ For the second problem, we have the following paragraph.
 
 ### Configuring GitHub with webhooks
 
-The first problem I should face: I'm in localhost, I haven't a remote environment (for now) that I can use to work with, but webhooks need a remote endpoint. Well, in the past I had this problem but for another task: how can I expose my localhost to someone (for tests, an example)? I used ngrok in the past, but through the years I found another tool called **Localtunnel**.
+The first problem I should face: I'm in localhost, I haven't a remote environment (for now) that I can use to work with, but webhooks need a remote endpoint. Well, in the past I had this problem but for another task: how can I expose my localhost to someone (for tests, an example)? I used ngrok in the past, but through the years I found another tool called **Localtunnel**. Of course, we shouldn't have this problem in a remote environment.
 
 With a single command, I can expose my port and access the website from anywhere using a link that looks like this: *https://gentle-impala-38.loca.lt* (I love the name); now, we need to configure webhooks on the specific repository.
 
