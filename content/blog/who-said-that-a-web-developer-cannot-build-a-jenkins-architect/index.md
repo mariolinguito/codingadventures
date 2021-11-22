@@ -15,7 +15,7 @@ Simpler, Jenkins help you to make your life easier, only after making your days 
 
 ## How we can use Jenkins with Drupal
 
-First of all, the thing that allows automating Drupal is the magnificent configuration management (want to know more? Okay, follow this link).
+First of all, the thing that allows automating Drupal is the magnificent configuration management (want to know more? Okay, follow [this link](https://www.drupal.org/docs/configuration-management)).
 
 Well, since we made an introduction about what is Jenkins and what we use from Drupal to make an integration with it, we can say what we need to make all things get done.
 
@@ -29,7 +29,7 @@ I will not explain how to install Drupal or Jenkins because it is not the main t
 
 **Another important note:** I pushed all my code on Github, but I haven't followed all the versioning' *best practices*; this is a test, I'm learning this to make the same thing later and better on a real project.
 
-At the end of this step, we have a Drupal 9 hosted on Github, this is the link: \[GITHUB]
+At the end of this step, we have a Drupal 9 hosted on Github, this is the link: <https://github.com/mariolinguito/drupal-jenkins>
 
 ### Configure the Jenkins: our great butler
 
@@ -93,7 +93,7 @@ But, we have two problems:
 1. Sometimes I need to install some modules and enable it, so we need to give to Jenkins the possibility to read from the file what is the machine name of the modules and enable it with Drush,
 2. The second problem is that we just need to press the button to start the process, but I want that everything starts automatically when I push something to the main branch of the project;
 
-For the first problem, we described the solution in the point itself, so, as I said, I will put a file called "modules_to_enable.txt" in the main directory of Drupal and Jenkins will read it and use it with the command; after that, Jenkins will delete the file from the root.
+For the first problem, we described the solution in the point itself, so, as I said, I will put a file called *"modules_to_enable.txt"* in the main directory of Drupal and Jenkins will read it and use it with the command; after that, Jenkins will delete the file from the root.
 
 So, the script becomes this:
 
@@ -164,7 +164,7 @@ The events I want to hook are the *push* and *pull requests* on the main branch*
 
 The following GIF show how the whole process start and end (I'm pushing directly into the main branch, but in a real-world scenario there would be another branch that would be merged with the main branch):
 
-\[GIF]
+![How the Jenkins job works](peek-22-11-2021-18-16.gif "How the Jenkins job works")
 
 Practically, every time that we push on the main branch or make a merging of some branch to the main since *webhooks allow external services to be notified when certain events happen* it makes a POST request to the specific URL we set before, and start a build into Jenkins job that make some things, the things that we specified into the script.
 
