@@ -8,8 +8,6 @@ It comes a time when someone has to choose on what to spend energy, so it is ine
 
 PS. Okay, this is a little bit annoying for someone but I started this blog for myself mainly, and this is why I'm not so obsessive on analytics or others. I publish articles sometimes, so if someone found this helpful: good; otherwise: good.
 
-
-
 ## The cemetery
 
 ### 1. Salesjar
@@ -17,8 +15,6 @@ PS. Okay, this is a little bit annoying for someone but I started this blog for 
 ### 2. Codsletter
 
 ### 3. Sturiorum
-
-
 
 ## The future plan
 
@@ -28,4 +24,4 @@ PS. Okay, this is a little bit annoying for someone but I started this blog for 
 
 ### 3. Blogging, blogging, blogging
 
-### 4. Game development
+### 4. Game development and competitive programming (?)
