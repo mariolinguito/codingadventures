@@ -24,4 +24,4 @@ PS. Okay, this is a little bit annoying for someone but I started this blog for 
 
 ### 3. Blogging, blogging, blogging
 
-### 4. Game development and competitive programming (?)
+### 4. Game development / competitive programming (?)
