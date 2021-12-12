@@ -8,13 +8,17 @@ It comes a time when someone has to choose on what to spend energy, so it is ine
 
 PS. Okay, this is a little bit annoying for someone but I started this blog for myself mainly, and this is why I'm not so obsessive on analytics or others. I publish articles sometimes, so if someone found this helpful: good; otherwise: good.
 
+## The exclusion
+
+### 1. Codsletter
+
+After the last release of this software, I'm not planning any other releases just because it works. I mean, it works for what it was supposed to work for. If you read the blog post that I wrote about this you will notice that I created Codsletter for me, for the fact that I didn't want to put a comment system or something like on my blog, or again third-parties software.
+
 ## The cemetery
 
 ### 1. Salesjar
 
-### 2. Codsletter
-
-### 3. Sturiorum
+### 2. Sturiorum
 
 ## The future plan
 
@@ -24,4 +28,4 @@ PS. Okay, this is a little bit annoying for someone but I started this blog for 
 
 ### 3. Blogging, blogging, blogging
 
-### 4. Game development / competitive programming (?)
+### 4. Game development (?)
