@@ -14,7 +14,7 @@ PS. Okay, this is a little bit annoying for someone but I started this blog for 
 
 After the last release of this software, I'm not planning any other releases just because it works. I mean, it works for what it was supposed to work for. If you read the blog post that I wrote about this you will notice that I created Codsletter for me, for the fact that I didn't want to put a comment system or something like on my blog, or again third-parties software. 
 
-So, it works well for the simple thing that it should to do, and I'm not planned to upgrade it.
+So, it works well for the simple thing that it should do, and I'm not planning to upgrade it.
 
 ## The cemetery
 
