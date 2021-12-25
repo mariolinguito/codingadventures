@@ -62,7 +62,7 @@ In the end, I will get the certification (CKAD) for this extremely funny and use
 
 ## Drupal
 
-Well, Drupal is omnipresent in my professional life; this is because I work with it every day and discover new things on every project. I love to see new things, read articles about them, try new modules and makes new ones (using the best practices as soon as possible and code analysis tools like PHPStan - I wrote an article about this).
+Well, Drupal is omnipresent in my professional life; this is because I work with it every day and discover new things on every project. I love to see new things, read articles about them, try new modules and makes new ones (using the best practices as soon as possible and code analysis tools like PHPStan - [I wrote an article about this](https://codingadventures.netlify.app/how-to-use-phpstan-on-your-drupal-module-a-practical-example-of-mine/)).
 
 So, said this, my goals are:
 
@@ -82,6 +82,6 @@ This is one of my gardens, so I would put in it everything that I want :-)
 
 I'm an avid reader, I should admit it; especially for thrillers and Agatha Cristie's books. In the past more, but today (with the work and other things) I can have only some hours a week to dedicate to the reading.
 
-So, I challenge myself on a thing that I called "one book a week"; I will read a book a week about everything (not only novel): from the space to human behaviour study, from thriller to yellow, from illustrated books to horror (recently I bought *If it Bleeds* by Stephen King); and maybe start a newsletter, or a podcast, or a video series about my thoughts about them.
+So, I challenge myself on a thing that I called *"one book a week"*; I will read a book a week about everything (not only novel): from the space to human behaviour study, from thriller to yellow, from illustrated books to horror (recently I bought *If it Bleeds* by Stephen King); and maybe start a newsletter, or a podcast, or a video series about my thoughts about them.
 
 In the end, I know and hope with all my heart that 2022 will be special and rich in the knowledge!
