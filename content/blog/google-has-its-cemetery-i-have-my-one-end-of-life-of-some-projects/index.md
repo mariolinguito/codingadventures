@@ -6,11 +6,9 @@ description: It comes a time when someone has to choose on what to spend energy,
 ---
 It comes a time when someone has to choose on what to spend energy so it is inevitable to shut down or freeze something. Well, this is a list of projects that I want to shut down, that I don't want to dedicate my time and myself because some reasons (that I listed in this post). Plus, I want to say in this post what is my plan for the future.
 
-PS. Okay, I know that this can be a little bit annoying for someone, but I started this blog for myself (this is why I'm not so obsessive about analytics). I publish articles sometimes, so if someone found this helpful; in the end, this can be good for everyone; otherwise: good for me.
+PS. Okay, I know that this can be a little bit annoying for someone, but I started this blog for myself (this is why I'm not so obsessive about analytics). In the end, this can be good for everyone; otherwise: good for me.
 
 It is a time to make a little cleaning of my tangle of thoughts.
-
-
 
 ## The cemetery
 
@@ -18,16 +16,12 @@ It is a time to make a little cleaning of my tangle of thoughts.
 2. Codsletter,
 3. Sturiorum;
 
-
-
 ## The plan
 
 1. Kubernetes,
 2. Drupal,
 3. Blogging, blogging, blogging,
 4. Reading more and more books;
-
-
 
 ## Salesjar
 
@@ -42,8 +36,6 @@ I think that there are some reasons for the death of this software:
 
 In the end, Salesjar is dead.
 
-
-
 ## Codsletter
 
 For this web application maybe it is wrong to talk about death because Codsletter is up and running also on this blog (you can subscribe to my newsletter navigating on the home page of this website).
@@ -51,8 +43,6 @@ For this web application maybe it is wrong to talk about death because Codslette
 Simply, Codsletter makes the thing that I premeditate to make it to do. It manages subscribers and forms. Definitively it works well.
 
 This is because I will publish only one version where I make some refactoring of the code and will stop the development. Of course, if someone wants to contribute or fork the project, he can do it without any friction (thanks to the license that I used for it).
-
-
 
 ## Studiorum
 
@@ -62,8 +52,6 @@ At the base of this project, there was solidarity: every student had to share so
 
 I think not. So, I will archive it.
 
-
-
 ## Kubernetes
 
 Kubernetes is the last technology that I appreciated in this period, this is because I'm not the "software developer" or the "web developer", but I'm an extremely curious person and I want to explore different things (like K8S).
@@ -71,8 +59,6 @@ Kubernetes is the last technology that I appreciated in this period, this is bec
 This sudden passion was born from a course that the company currently I'm working for rolled to me and other co-workers. I enjoyed so much this technology that I wanted to explore it well.
 
 In the end, I will get the certification for this extremely funny and useful technology.
-
-
 
 ## Drupal
 
@@ -84,8 +70,6 @@ So, said this, my goals are:
 2. Write more articles about Drupal exploring different fields and integrations,
 3. Read more articles to improve my programming skills about custom modules and so on (I tend to use best practices for everything that I made);
 
-
-
 ## More blogging
 
 As I said in the previous point, I want to write more about Drupal but also about everything else like my life or my side projects. I consider this blog more a logbook than a simple "how to make"-like website.
@@ -93,8 +77,6 @@ As I said in the previous point, I want to write more about Drupal but also abou
 Sometimes you can find on this website some articles about philosophy or work-life balancing tips, technical and non-technical posts, trips that I will make, images and others.
 
 This is my garden, so I would put in it everything that I want :-)
-
-
 
 ## Reading more books
 
