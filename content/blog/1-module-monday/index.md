@@ -1,6 +1,7 @@
 ---
-title: "#1 Module monday: "
+title: "#1 Module monday: Feeds"
 date: 2021-12-30T09:11:47.495Z
-description: "#1 Module monday: "
+description: In this first article about this series I want to talk about Feeds,
+  a contrib module for Drupal CMS that will make easier your life for sure.
 ---
-\#1 Module monday:
+TBD
