@@ -17,7 +17,7 @@ The existence and the essence of this article are this, in the end: I faced with
 
 We can consider a token as a placeholder; this placeholder, at the right moment, will be substituted by some value. We have a token for almost everything: the site name, the node title, the node id, the random number or strings, the date, hour, and so on.
 
-The tokens are defined in Drupal using a contrib module called *Token* (link to the module), and as with everything in the CMS, you can define your tokens. But we have a limit... we can use tokens inside the scope of the context.
+The tokens are defined in Drupal using a contrib module called *Token* ([this](https://www.drupal.org/project/token) is the official page of the project), and as with everything in the CMS, you can define your tokens. But we have a limit... we can use tokens inside the scope of the context.
 
 For example, **you cannot use the node id token for a media element** (using the media library core module). Again, **you cannot access this information during the creation of the node itself** (it doesn't have it yet!).
 
@@ -25,21 +25,17 @@ It is a problem, in particular: my problem. Let's go in order.
 
 ## \#1 Problem:
 
-I'm using the contrib module called **File (Field) Paths** (link to the module) because I need to manage files uploaded on a specific node (with media library) using this tree directory structure:
+I'm using the contrib module called **File (Field) Paths** (download it [here](https://www.drupal.org/project/filefield_paths)) because I need to manage files uploaded on a specific node (with media library) using this tree directory structure:
 
 */attachments/{YEAR}/{NID}/{ALL_THE_FILES}*
 
 While the year is a piece of well-known information (a token can satisfy this), the problem is that I need to use the node id inside the media element, in particular: inside the media type defined by some fields (as file field). In the first instance, you cannot use the node id token inside media fields.
-
-
 
 ## \#2 Problem:
 
 In any case, if we can get the node id of the related node, we cannot retrieve the node id (*nid*) of a specific node before its creation, so if you are in the creation phase, the nid will be null.
 
 The nid is not defined yet.
-
-
 
 ## \#1 Solution:
 
@@ -54,8 +50,6 @@ At this point, retrieving this information is simple, using this code:
 \[CODE]
 
 But, if we inspect the same request made by the media library during a node creation, we can analyse that we haven't an *entity id* (because the node doesn't have it yet).
-
-
 
 ## \#2 Solution:
 
@@ -77,8 +71,6 @@ After the saving of the node, all the files (stored in the temporary folder) wil
 
 */attachments/2022/**101**/{ALL_THE_FILES}*
 
-
-
 ## All fabulous, but there are limits!
 
 The first limit that comes to my mind is the abandoned node creation. Imagine user A that want to create a node X; he compiles every mandatory field, like title or some others, and, most important of all, added some files using the media library and browse files from his computer.
@@ -99,4 +91,6 @@ We can simply create a custom CRON entity that every time analyse the files that
 
 This is not the final solution, otherwise, can exist this situation: we want to save a file without a node related because it is linked by another website or something like that. Using the CRON described previously, we may have the problem of the 404 for that file.
 
-As my database's professor says every time: it all depends on the context!
+As my database's professor says every time: 
+
+> It all depends on the context!
