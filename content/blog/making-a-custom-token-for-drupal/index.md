@@ -43,7 +43,7 @@ For the first problem, we have a simple solution. We can create a custom token f
 
 The *entity id* can be retrieved using the request that we make using the media library (during the selection of the file from the filesystem), which can be analysed using the *"network"* tab in the inspector.
 
-\[IMG]
+![The entity ID of the current node from the POST request.](request_media_library.png "The entity ID of the current node from the POST request.")
 
 At this point, retrieving this information is simple, using this code:
 
