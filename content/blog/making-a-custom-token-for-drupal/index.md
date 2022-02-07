@@ -47,7 +47,39 @@ The *entity id* can be retrieved using the request that we make using the media 
 
 At this point, retrieving this information is simple, using this code:
 
-\[CODE]
+```php
+<?php
+
+# [...]
+
+/**
+ * Implements _hook_get_node_id().
+ */
+function _custom_tokens_get_node_id() {
+  $path = \Drupal::request()->getRequestUri();
+  $params = explode('&', $path);
+  $values = [];
+  $node_relationship_id = -1;
+ 
+  foreach($params as $key => $value) {
+    $explosion = explode('=', $value);
+    $explosion[0] = str_replace(['%5B', '%5D'], ['[', ']'], $explosion[0]);
+    $values[$explosion[0]] = $explosion[1];
+  }
+
+  if(isset($values['media_library_opener_parameters[entity_id]'])) {
+    $node_relationship_id = $values['media_library_opener_parameters[entity_id]'];
+  } else {
+    # Node creation...
+    # We have not the node id because it doesn't exists.
+    # We should use a session uuid because we need to use
+    # a unique key for user.
+    $node_relationship_id = $_SESSION['_sf2_meta']['s'];
+  }
+
+  return $node_relationship_id;
+}
+```
 
 But, if we inspect the same request made by the media library during a node creation, we can analyse that we haven't an *entity id* (because the node doesn't have it yet).
 
