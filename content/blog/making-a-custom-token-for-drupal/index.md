@@ -1,6 +1,6 @@
 ---
 title: How to use a custom token in Drupal and save your day
-date: 2022-02-19T18:17:02.866Z
+date: 2022-02-19T18:19:47.428Z
 description: Drupal is versatile and powerful, but if we want to tell the truth,
   every open-source software is like that, just because you can modify and adapt
   every piece of the code based on your exigences.
