@@ -130,3 +130,17 @@ This is not the final solution, otherwise, can exist this situation: we want to 
 As my database's professor says every time: 
 
 > It all depends on the context!
+
+## Some resources:
+
+* How to create a custom token:
+
+  * <https://www.cloudways.com/blog/create-custom-drupal-token-modules/>
+  * [https://opensenselabs.com/blogs/tech/how-create-custom-token-drupal-8/](https://opensenselabs.com/blogs/tech/how-create-custom-token-drupal-8)
+  * [https://codimth.com/blog/web/drupal/how-create-custom-token-drupal-8-9/](https://codimth.com/blog/web/drupal/how-create-custom-token-drupal-8-9)
+* What is a token:
+
+  * [https://www.rapiddg.com/article/drupal-token-substitution/](https://www.rapiddg.com/article/drupal-token-substitution)
+* How to use a presave hook:
+
+  * [https://drupalbook.org/drupal/9113-entity-hooks/](https://drupalbook.org/drupal/9113-entity-hooks)
