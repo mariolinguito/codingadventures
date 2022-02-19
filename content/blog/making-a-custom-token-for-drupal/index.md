@@ -135,12 +135,12 @@ As my database's professor says every time:
 
 * How to create a custom token:
 
-  * <https://www.cloudways.com/blog/create-custom-drupal-token-modules/>
-  * [https://opensenselabs.com/blogs/tech/how-create-custom-token-drupal-8/](https://opensenselabs.com/blogs/tech/how-create-custom-token-drupal-8)
-  * [https://codimth.com/blog/web/drupal/how-create-custom-token-drupal-8-9/](https://codimth.com/blog/web/drupal/how-create-custom-token-drupal-8-9)
+  * [How to Create Custom Drupal 8 Tokens Modules](https://www.cloudways.com/blog/create-custom-drupal-token-modules/)
+  * [How To Create A Custom Token In Drupal 8?](https://opensenselabs.com/blogs/tech/how-create-custom-token-drupal-8)
+  * [How To Create A Custom Token In Drupal 8 & 9](https://codimth.com/blog/web/drupal/how-create-custom-token-drupal-8-9)
 * What is a token:
 
-  * [https://www.rapiddg.com/article/drupal-token-substitution/](https://www.rapiddg.com/article/drupal-token-substitution)
-* How to use a presave hook:
+  * [Drupal Token Substitution](https://www.rapiddg.com/article/drupal-token-substitution)
+* How to use a presave hook:[](https://drupalbook.org/drupal/9113-entity-hooks)
 
-  * [https://drupalbook.org/drupal/9113-entity-hooks/](https://drupalbook.org/drupal/9113-entity-hooks)
+  * [Drupal Book | Entity Hooks](https://drupalbook.org/drupal/9113-entity-hooks)
