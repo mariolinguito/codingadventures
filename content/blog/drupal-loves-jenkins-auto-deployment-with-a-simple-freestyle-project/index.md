@@ -170,10 +170,14 @@ The following GIF show how the whole process start and end (I'm pushing directly
 
 Practically, every time that we push on the main branch or make a merging of some branch to the main since *webhooks allow external services to be notified when certain events happen* it makes a POST request to the specific URL we set before, and start a build into Jenkins job that make some things, the things that we specified into the script.
 
-In conclusion, we can say that a developer needs to know Jenkins and need to broaden horizons to discover a new way to make things done. I'm a developer right down to the marrow, I love to see the backside of everything and I love to work as a back-end developer, but I need to know also how certain things works that are outside to the *"web development world"*.
+In conclusion, we can say that a developer needs to know Jenkins and need to broaden horizons to discover a new way to make things done. I'm a developer right down to the marrow, I love to see the backside of everything and I love to work as a back-end developer, but I need to know also how certain things works that are outside the *"web development world"*.
 
 Sources: 
 
 * [Drupal 8 Deployments with Jenkins, GitHub & Slack](https://chromatichq.com/insights/drupal-8-deployments-jenkins-github-slack)
 
-Let see on Github if you are some improvements to push ;-)
+Let's see on Github if you are some improvements to push ;-)
+
+### Update (2022-02-20):
+
+With the latest version of Drush, you can avoid the step of enabling or disabling modules with the text file (from lines 14 to 26 of the script). This is because Drush automatically enables/disables modules before the import operation of the configurations.
