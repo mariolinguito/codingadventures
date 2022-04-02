@@ -1,6 +1,6 @@
 ---
-title: How to feed Layout Builder with data retrieved from external
-date: 2022-03-06T09:14:47.755Z
-description: How to feed Layout Builder with data retrieved from external
+title: "Module of the month: Bootstrap Layout Builder"
+date: 2022-04-02T08:19:55.020Z
+description: "Module of the month: Bootstrap Layout Builder"
 ---
-How to feed Layout Builder with data retrieved from external
+Module of the month: Bootstrap Layout Builder
