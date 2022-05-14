@@ -201,6 +201,5 @@ Remember the bulk operation. In the end, if the user wants to perform these oper
 
 ## The improvements:
 
-One improvement that someone can make is to use an asynchronous operation that checks all the things described previously and show an error message to the users. This avoids the use of redirecting the user to the content page and makes the system more usability than now.
-
-Another improvement is to use PHPStan ([How to use PHPStan on your Drupal module: a practical example of mine](https://codingadventures.netlify.app/how-to-use-phpstan-on-your-drupal-module-a-practical-example-of-mine/)) to clean and make better the module (using for example service injection and others).
+* One improvement that someone can make is to use an asynchronous operation that checks all the things described previously and show an error message to the users. This avoids the use of redirecting the user to the content page and makes the system more usability than now.
+* Another improvement is to use PHPStan ([How to use PHPStan on your Drupal module: a practical example of mine](https://codingadventures.netlify.app/how-to-use-phpstan-on-your-drupal-module-a-practical-example-of-mine/)) to clean and make better the module source code (using for example service injection and other improvements).
