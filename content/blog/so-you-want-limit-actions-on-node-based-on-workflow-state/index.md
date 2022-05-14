@@ -50,6 +50,111 @@ Based on these sentences, I wrote some pieces of code:
   }
 ```
 
+We use some service methods, as: 
+
+```php
+<?php
+
+  # [...]
+
+  public function checkModerationAccessForNode($node) {
+    $rules = $this->getRules();
+    $current_roles = $this->currentUserRoles();
+    $node_states = $node !== null ? $this->flatArrayOneLevel($node->get('moderation_state')->getValue()) : [];
+
+    foreach ($rules as $key => $rule) {
+      $current_rule = array_map('trim', explode('=', $rule));
+      $rule_roles = $this->roles($current_rule[0]);
+      $rule_actions = $this->actions($current_rule[1]);
+      $rule_states = $this->states($current_rule[2]);
+
+      if(empty(array_intersect($current_roles, $rule_roles))) {
+        return true;
+      }
+
+      if(empty($node_states)) {
+        return false;
+      }
+
+      if(empty(array_intersect($node_states, $rule_states))) {
+        return true;
+      }
+    }
+  }
+
+  public function getRules() {
+    $configuration = \Drupal::config('workflow_hooks_helper.settings');
+    return explode("\r\n", $configuration->get('actions_allowed_on_roles'));
+  }
+
+  public function getRoutes() {
+    $configuration = \Drupal::config('workflow_hooks_helper.settings');
+    return array_map('trim', explode("\r\n", $configuration->get('routes_subscriber')));
+  }
+
+  public function currentUserRoles() {
+    $current_user = \Drupal::currentUser();
+    $current_roles = $current_user->getRoles();
+
+    if(($key = array_search('authenticated', $current_roles)) !== false) {
+      unset($current_roles[$key]);
+    } return $current_roles;
+  }
+
+  public function roles($roles) {
+    $rule_roles = trim(str_replace(['[', ']'], '', $roles));
+    $rule_roles = array_map('trim', explode(',', $rule_roles));
+
+    return $rule_roles;
+  }
+
+  public function actions($actions) {
+    $rule_actions = trim(str_replace(['[', ']'], '', $actions));
+    $rule_actions = array_map('trim', explode(',', $rule_actions));
+
+    return $rule_actions;
+  }
+
+  public function states($states) {
+    $rule_states = trim(str_replace(['[', ']'], '', $states));
+    $rule_states = array_map('trim', explode(',', $rule_states));
+
+    return $rule_states;
+  }
+
+  public function flatArrayOneLevel($array_to_flat) {
+    $array_flatted = [];
+    foreach ($array_to_flat as $key => $value) {
+      $array_flatted[] = $value['value'];
+    } return $array_flatted;
+  }
+
+  public function workflowStatesChecking($rule_states, $node_states) {
+    $operation_status = false;
+    if(!empty(array_intersect($rule_states, $node_states))) {
+      $operation_status = true;
+    } return $operation_status;
+  }
+
+  public function workflowRolesChecking($rule_roles, $node_roles) {
+    $operation_status = false;
+    if(!empty(array_intersect($rule_roles, $node_roles))) {
+      $operation_status = true;
+    } return $operation_status;
+  }
+
+  public function workflowActionsChecking($rule_actions, $node_actions) {
+    $operation_actions = $node_actions;
+    foreach ($rule_actions as $key => $action) {
+      if(substr($action, 0, 1) === '!') {
+        unset($operation_actions[ltrim($action, '!')]);
+      }
+    } return $operation_actions;
+  }
+```
+
+
+
 ## The settings and their form:
 
 I have the defect (is it a bad thing!?) to make everything as dynamically as possible, so I wanted to make this piece of code/module dynamically using the settings. But, let me explain the form of a specific configuration:
