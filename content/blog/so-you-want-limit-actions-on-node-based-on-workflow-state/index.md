@@ -50,7 +50,7 @@ Based on these sentences, I wrote some pieces of code:
   }
 ```
 
-We use some service methods, as: 
+We use some service methods, such as: 
 
 ```php
 <?php
