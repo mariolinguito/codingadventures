@@ -19,11 +19,11 @@ The problem starts to be a hard adventure...
 
 The first element to understand (that I used in this case) is an *EventSubscriber*, for checking the users' permissions before the operation (on the node). It is a powerful tool that we can use in more circumstances because it stands in the way between two operations. As official documentation says:
 
-*Event systems are used in many complex applications as a way to allow extensions to modify how the system works.*
+> *Event systems are used in many complex applications as a way to allow extensions to modify how the system works.*
 
 And again:
 
-**\*Event Subscribers** - Sometimes called "Listeners", are callable methods or functions that react to an event being propagated throughout the Event Registry.*
+> **Event Subscribers** - Sometimes called "Listeners", are callable methods or functions that react to an event being propagated throughout the Event Registry.
 
 This element can be extremely useful in some cases like this, just because we can perform some controls before the operation will be accomplished by the system; our check will be about the role of the user and the moderation state of the content.
 
@@ -157,8 +157,6 @@ We use some service methods, such as:
   }
 ```
 
-
-
 ## The settings and their form:
 
 I have the defect (is it a bad thing!?) to make everything as dynamically as possible, so I wanted to make this piece of code/module dynamically using the settings. But, let me explain the form of a specific configuration:
@@ -185,21 +183,19 @@ I have the defect (is it a bad thing!?) to make everything as dynamically as pos
 
 The first text area regards the roles, actions and workflow states; you can specify the role of the user, the action that he can or cannot perform (based on ! before the action name) in which workflow states. For example:
 
-*\[content_editor] = \[!edit] = \[revision, approved, archived]*
+`[content_editor] = [!edit] = [revision, approved, archived]`
 
 This line means that all users with the role of the content editor cannot edit the content if it is in revision, approved or archived workflow state. Again:
 
-*\[content_editor] = \[!delete] = \[revision, approved, published, archived]*
+`[content_editor] = [!delete] = [revision, approved, published, archived]`
 
 Instead, this means that the content editor cannot delete an element if it is in revision, approved, published or archived workflow state.
 
 Based on the second part of each line we need to specify the route that should be subscribed; we can use the second text area for this:
 
-*entity.node.delete_form*
-
-*entity.node.delete_multiple_form*
-
-*entity.node.edit_form*
+`entity.node.delete_form`\
+`entity.node.delete_multiple_form`\
+`entity.node.edit_form`
 
 Remember the bulk operation. In the end, if the user wants to perform these operations on items in these workflow states, he would be redirected to the content page.
 
