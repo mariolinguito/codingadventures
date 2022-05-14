@@ -19,11 +19,9 @@ The first element to understand (that I used in this case) is an *EventSubscribe
 
 And again:
 
-***Event Subscribers** - Sometimes called "Listeners", are callable methods or functions that react to an event being propagated throughout the Event Registry.*
+**\*Event Subscribers** - Sometimes called "Listeners", are callable methods or functions that react to an event being propagated throughout the Event Registry.*
 
 This element can be extremely useful in some cases like this, just because we can perform some controls before the operation will be accomplished by the system; our check will be about the role of the user and the moderation state of the content.
-
-
 
 ## Okay, show me the code, please!
 
@@ -52,8 +50,6 @@ Based on these sentences, I wrote some pieces of code:
   }
 ```
 
-
-
 ## The settings and their form:
 
 I have the defect (is it a bad thing!?) to make everything as dynamically as possible, so I wanted to make this piece of code/module dynamically using the settings. But, let me explain the form of a specific configuration:
@@ -80,8 +76,8 @@ Based on the second part of each line we need to specify the route that should b
 
 Remember the bulk operation. In the end, if the user wants to perform these operations on items in these workflow states, he would be redirected to the content page.
 
-
-
 ## The improvements:
 
 One improvement that someone can make is to use an asynchronous operation that checks all the things described previously and show an error message to the users. This avoids the use of redirecting the user to the content page and makes the system more usability than now.
+
+Another improvement is to use PHPStan ([How to use PHPStan on your Drupal module: a practical example of mine](https://codingadventures.netlify.app/how-to-use-phpstan-on-your-drupal-module-a-practical-example-of-mine/)) to clean and make better the module (using for example service injection and others).
