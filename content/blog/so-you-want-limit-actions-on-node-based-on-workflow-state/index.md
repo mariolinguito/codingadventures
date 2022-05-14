@@ -159,7 +159,25 @@ We use some service methods, such as:
 
 I have the defect (is it a bad thing!?) to make everything as dynamically as possible, so I wanted to make this piece of code/module dynamically using the settings. But, let me explain the form of a specific configuration:
 
-\[CONFIGURATION]
+```php
+ <?php
+
+   # [...]
+
+   $form['actions_allowed_on_roles'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Actions allowed for roles and workflow state:'),
+      '#description' => $this->t('You can define an array of roles and array of actions allowed, using this syntax: <i>[content_editor, content_manager] = [edit, !delete] = [revision, approved, non_approvato, approvato, published, archived]</i>.<br>
+        An example: if you use this line: <i>[content_editor] = [!delete] = [revision, approved, non_approvato, approvato, published, archived]</i> you say that the content editor cannot delete an element in the followed workflow states.'),
+      '#default_value' => $this->config('workflow_hooks_helper.settings')->get('actions_allowed_on_roles'),
+    ];
+    $form['routes_subscriber'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Routes to subscribe:'),
+      '#description' => $this->t('You can specify the list of routes to subscribe.'),
+      '#default_value' => $this->config('workflow_hooks_helper.settings')->get('routes_subscriber'),
+    ];
+```
 
 The first text area regards the roles, actions and workflow states; you can specify the role of the user, the action that he can or cannot perform (based on ! before the action name) in which workflow states. For example:
 
