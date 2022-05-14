@@ -1,7 +1,11 @@
 ---
-title: So, you want limit actions on node based on workflow state...
+title: "So, you want limit actions on node based on workflow state and user
+  roles: not so simple!"
 date: 2022-04-09T13:09:20.797Z
-description: So, you want limit actions on node based on workflow state...
+description: In some cases, I need to limit the actions (for the contents) based
+  on the workflow state and simultaneously for specific roles. This can be a
+  tremendous challenge and a strange and much in demand request for a
+  Drupal-made website.
 ---
 ## Some harmless chatter...
 
