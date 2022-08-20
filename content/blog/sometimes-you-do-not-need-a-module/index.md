@@ -1,6 +1,6 @@
 ---
 title: Sometimes you do not need a module
-date: 2022-08-18T16:31:10.333Z
+date: 2022-08-20T12:32:40.229Z
 description: We live in a world where everything must be complex. In the
   programming world, this phenomenon is exasperated (I fell into this trap of
   complexity in the past). We want to use the last framework, the most complex
@@ -19,7 +19,42 @@ Maybe there is a module that makes the magic, but this module surely will make o
 
 I wrote a piece of code that make the thing for me:
 
-\[CODE]
+```php
+<?php
+
+/**
+ * Implements hook_entity_insert().
+ */
+function hook_entity_insert(EntityInterface $entity) {
+  _hooks_helper_module_entup_menu_link($entity);
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function hook_entity_update(EntityInterface $entity) {
+  _hooks_helper_module_entup_menu_link($entity);
+}
+
+/**
+ * Implements _hook_entity_entup_menu_link().
+ */
+function _hook_entup_menu_link($entity) {
+
+  if ($entity->bundle() === 'content_type_machine_name') {
+    MenuLinkContent::create([
+      'title' => $entity->getTitle(),
+      'link' => [
+        'uri' => 'internal:/node/'.$entity->id()
+      ],
+      'menu_name' => 'main',
+      # you should specify the view name and view display, of
+      # course without brackets.
+      'parent' => 'views_view:views.{view_name}.{view_display}',
+    ])->save();
+  }
+}
+```
 
 On every insert and update of specific content, this code will create a menu item under a specific parent item, automatically. Of course, an administrator can change the item because the code checks if the menu item is available or not.
 
