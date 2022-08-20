@@ -28,14 +28,14 @@ I wrote a piece of code that make the thing for me:
  * Implements hook_entity_insert().
  */
 function hook_entity_insert(EntityInterface $entity) {
-  _hooks_helper_module_entup_menu_link($entity);
+  _hook_entup_menu_link($entity);
 }
 
 /**
  * Implements hook_entity_update().
  */
 function hook_entity_update(EntityInterface $entity) {
-  _hooks_helper_module_entup_menu_link($entity);
+  _hook_entup_menu_link($entity);
 }
 
 /**
