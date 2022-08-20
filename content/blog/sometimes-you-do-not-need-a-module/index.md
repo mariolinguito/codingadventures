@@ -7,6 +7,8 @@ description: We live in a world where everything must be complex. In the
   infrastructure, the programming language of the moment, and the fastest
   technology ever.
 ---
+![I choked: from reddit.com](overeng.jpg "I choked: from reddit.com")
+
 We live in a world where everything must be complex. In the programming world, this phenomenon is exasperated (I fell into this trap of complexity in the past). We want to use the last framework, the most complex infrastructure, the programming language of the moment, and the fastest technology ever.
 
 But why? Do we need this?
