@@ -58,15 +58,13 @@ Kubernetes is the last technology that I approached in this period, this is beca
 
 This sudden passion was born from a course that the company currently I'm working for rolled to me and other co-workers. I enjoyed so much this technology that I wanted to explore it well.
 
-In the end, I will get the certification (CKAD) for this extremely funny and useful technology.
-
 ## Drupal
 
-Well, Drupal is omnipresent in my professional life; this is because I work with it every day and discover new things on every project. I love to see new things, read articles about them, try new modules and makes new ones (using the best practices as soon as possible and code analysis tools like PHPStan - [I wrote an article about this](https://codingadventures.netlify.app/how-to-use-phpstan-on-your-drupal-module-a-practical-example-of-mine/)).
+Well, Drupal is omnipresent in my professional life; this is because I work with it every day and discover new things on every project. I love to see new things, read articles about them, try new modules and make new ones (using the best practices as soon as possible and code analysis tools like PHPStan - [I wrote an article about this](https://codingadventures.netlify.app/how-to-use-phpstan-on-your-drupal-module-a-practical-example-of-mine/)).
 
 So, said this, my goals are:
 
-1. Contribute more to the community, improving contrib modules and other (like theme projects that I use every day),
+1. Contribute more to the community, improving contrib modules and others (like theme projects that I use every day),
 2. Write more articles about Drupal exploring different fields and integrations,
 3. Read more articles to improve my programming skills about custom modules and so on (I tend to use best practices for everything that I build);
 
@@ -80,8 +78,8 @@ This is one of my gardens, so I would put in it everything that I want :-)
 
 ## Reading more books
 
-I'm an avid reader, I should admit it; especially for thrillers and Agatha Cristie's books. In the past more, but today (with the work and other things) I can have only some hours a week to dedicate to the reading.
+I'm an avid reader, I should admit it; especially for thrillers and Agatha Cristie's books. In the past, but today (with the work and other things) I can have only some hours a week to dedicate to reading.
 
-So, I challenge myself on a thing that I called *"one book a week"*; I will read a book a week about everything (not only novel): from the space to human behaviour study, from thriller to yellow, from illustrated books to horror (recently I bought *If it Bleeds* by Stephen King); and maybe start a newsletter, or a podcast, or a video series about my thoughts about them.
+So, I challenge myself with a thing that I called *"one book a week"*; I will read a book a week about everything (not only novels): from space to human behaviour study, from thriller to yellow, from illustrated books to horror (recently I bought *If it Bleeds* by Stephen King); and maybe start a newsletter, or a podcast, or a video series about my thoughts about them.
 
-In the end, I know and hope with all my heart that 2022 will be special and rich in the knowledge!
+In the end, I know and hope with all my heart that 2022 will be special and rich in knowledge!
