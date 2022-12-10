@@ -46,7 +46,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             margin: `25px`,
           }}
         >
-          I do not run ads, and I will never do! If you liked this article, you can subscribe to my newsletter. Thank you :-)
+          I do not run ads, and I will never do! If you liked this article, you can follow me on LinkedIn. Thank you :-)
         </p>
         <hr
           style={{
