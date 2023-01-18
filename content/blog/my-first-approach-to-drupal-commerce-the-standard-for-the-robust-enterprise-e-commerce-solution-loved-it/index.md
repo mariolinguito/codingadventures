@@ -109,6 +109,19 @@ I saved this information in the configurations because this should not be change
 
 Where **slot_uuid** is the bridge between the specific row in this table and the specific slot of time for this **product_variation**.
 
+But, where user can set the price for a single product? What better place than the edit page of the product itself? 
+Using a form alter hook we can add a section on the top of the editing page of a node (in this case, a product) where the user can put the information such as prices for each slot.
+
+![Edit page ofa product showing the price-in-time section](schermata-del-2023-01-18-21-10-24.png "Edit page ofa product showing the price-in-time section")
+
+Of course, we need to show the price-in-time section only if the editing page is for a variation product (if there is more than one variation) or for a product (if there is only one variation). Plus, only if the product belongs to a variation enabled in the module's configuration.
+
+Adding our custom submit, we can say to Drupal that we need to insert a new record in the previous table with all the information we need after; whereas removing a specific record because we removed the price for a slot. 
+
+Note that I wrote others helper functions that surround the whole context of the module file, such as the getter methods for the default values (for the form), etc.
+
+You can study the code of the alter form and other hooks on my GitHub repository, but they are not the most interesting part of the module.
+
 #### 2° step: the Price Resolver
 
 The second step was to think of something that changes dynamically the price of a product based on specific conditions (the current time). This "something" is the **price resolver** (this is the documentation: <https://docs.drupalcommerce.org/commerce2/developer-guide/pricing/price-resolvers>).
