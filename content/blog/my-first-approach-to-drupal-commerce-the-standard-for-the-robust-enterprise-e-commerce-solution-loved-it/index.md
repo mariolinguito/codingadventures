@@ -238,9 +238,16 @@ The third step has been the most difficult for me. The search fell on the order 
 
 I think this solves the problem: using the order processor we can apply fees or bonuses during the order processing, so using a specific bonus that will be ever equivalent to the shipping cost, we can cancel dynamically the shipping cost itself. In particular, the object that can make this magic possible is called an **adjustment**.
 
-We can specify an adjustment using a simple YAML file and using a structure like this:
+We can specify an adjustment using a simple YAML (called **price_in_time.commerce_adjustment_types.yml**) file and using a structure like this:
 
-\[CODE]
+```yaml
+price_in_time__free_shipping:
+  label: 'Price in Time: free shipping'
+  singular_label: 'price in time free shipping adjustment'
+  plural_label: 'price in time free shipping adjustments'
+  has_ui: true
+  weight: 10
+```
 
 This adjustment will have the same cost of the shipping applied to the order and will be substituted from the order itself. This is only if the current time is between the start and end date of a specific slot and the shipping boolean is set to true.
 
