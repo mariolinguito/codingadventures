@@ -34,7 +34,7 @@ Again, let's suppose that you are buying this pair of shoes between **12:00-18:0
 
 ### How I made it:
 
-I used Drush generate to create the prototype of the module, and I continued to use it to create the element of my module, such as services, controllers, and so on. I suggest you use this tool in every Drupal development process: [here is the documentation](https://www.drush.org/latest/commands/generate/).
+I used Drush generate to create the prototype of the module, and I continued to use it to create the elements of my module, such as services, controllers, and so on. I suggest you use this tool in every Drupal development process: [here is the documentation](https://www.drush.org/latest/commands/generate/).
 
 The first element I created was the configuration form. The structure of the configuration saved thanks to this form is the following:
 
