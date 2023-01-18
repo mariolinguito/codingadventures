@@ -12,7 +12,7 @@ But first, let me introduce what Drupal Commerce is (for the few that didn't hea
 
 Drupal Commerce was created by **Commerce Guys** (founded by Ryan Szrama). Then, it was renamed to its current name and released version 1.0 on August 2011. It can be extended with custom code and features as a simple Drupal instance.
 
-I'm not here to write a Wikipedia-like article about Drupal Commerce, if you want to know something about it, you can find everything on the official website: *https://drupalcommerce.org* (the documentation is DOC, as we say in Italy :-)
+I'm not here to write a Wikipedia-like article about Drupal Commerce, if you want to know something about it, you can find everything on the official website: <https://drupalcommerce.org> (the documentation is DOC, as we say in Italy for quality things :-)
 
 ### The requirements:
 
