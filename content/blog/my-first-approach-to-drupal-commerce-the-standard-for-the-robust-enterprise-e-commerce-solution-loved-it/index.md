@@ -34,19 +34,17 @@ I used Drush generate to create the prototype of the module, and I continued to 
 
 The first element I created was the configuration form. The structure of the configuration saved thanks to this form is the following:
 
-\[product_variation]:
-
-times:
-
-start_time
-
-end_time
-
-free_shipping
-
-UUID \[a random string for the specific slot]
-
-\[...]
+```yaml
+[product_variation]:
+  times:
+    start_time:    # time
+    end_time:      # time
+    free_shipping: # boolean
+    UUID:          # a random string
+ 
+ # For each product variation.
+ # [...]
+```
 
 Of course, this structure is repeated for each product variation type (retrieved by a specific method); and the slots were checked by a validator before the submission to make sure they don't overlap each other.
 
