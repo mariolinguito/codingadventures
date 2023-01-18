@@ -30,6 +30,8 @@ The default price should be used for the product in any other case.
 
 Let's suppose that you are visiting the product page of a product (a pair of shoes) during the morning, between **08:00-12:00**, so you should see the price of **10.25€**; instead, if you are visiting the same product page between **21:00-00:00** you should see the default price (the price set on the product).
 
+Again, let's suppose that you are buying this pair of shoes between 12:00-18:00, so you can see the price of 25.14€, but you do have not access to the free shipping bonus applied to the order.
+
 ### How I made it:
 
 I used Drush generate to create the prototype of the module, and I continued to use it to create the element of my module, such as services, controllers, and so on. I suggest you use this tool in every Drupal development process: \[more link]
