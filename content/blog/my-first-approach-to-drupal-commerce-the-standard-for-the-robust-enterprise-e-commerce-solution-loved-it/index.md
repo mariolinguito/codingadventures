@@ -34,7 +34,7 @@ Again, let's suppose that you are buying this pair of shoes between **12:00-18:0
 
 ### How I made it:
 
-I used Drush generate to create the prototype of the module, and I continued to use it to create the element of my module, such as services, controllers, and so on. I suggest you use this tool in every Drupal development process: \[more link]
+I used Drush generate to create the prototype of the module, and I continued to use it to create the element of my module, such as services, controllers, and so on. I suggest you use this tool in every Drupal development process: [here is the documentation](https://www.drush.org/latest/commands/generate/).
 
 The first element I created was the configuration form. The structure of the configuration saved thanks to this form is the following:
 
@@ -52,7 +52,53 @@ product_variation_name:
 
 Of course, this structure is repeated for each product variation type (retrieved by a specific method); and the slots were checked by a validator before the submission to make sure they don't overlap each other.
 
-\[CODE]
+```php
+<?php
+
+# [...]
+
+  /**
+   * 
+   * Check the two time periods overlap.
+   *
+   * Example:
+   * $periods = [
+   *    ['start_time' => "09:00", 'end_time' => '10:30'],
+   *    ['start_time' => "14:30", "end_time" => "16:30"],
+   *    ['start_time' => "11:30", "end_time" => "13:00"],
+   *    ['start_time' => "10:30", "end_time" => "11:30"],
+   * ];
+   *
+   * @param $periods
+   * @param string $start_time_key
+   * @param string $end_time_key
+   * @param int $corrupted
+   * @return bool
+   *
+   * Check the code on this page:
+   *  - https://dev.to/xichlo/determine-whether-two-date-ranges-overlap-in-php-1b5a
+   * 
+   * Of course I understood the code that I copy&paste, and I added
+   * the parameter $corrupted because I need the position of the error.
+   *
+   */
+  private function isTimesOverlapped($periods, $start_time_key, $end_time_key, &$corrupted = null) {
+    usort($periods, function ($a, $b) use ($start_time_key, $end_time_key) {
+      return strtotime($a[$start_time_key]) <=> strtotime($b[$end_time_key]);
+    });
+
+    foreach ($periods as $key => $period) {
+      if ($key != 0) {
+        if (strtotime($period[$start_time_key]) < strtotime($periods[$key - 1][$end_time_key])) {
+          $corrupted = $key - 1;
+          return true;
+        }
+      }
+    }
+
+    return false;
+  }
+```
 
 I saved this information in the configurations because this should not be changed in the future so frequently. Instead, the thing that can be changed much more often will be the price for every product in the specific slot of time. This is the reason I created a custom table with the following columns:
 
