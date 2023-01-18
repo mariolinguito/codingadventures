@@ -106,7 +106,7 @@ ID | product_variation_sku | product_variation | slot_uuid | number | currency_c
 
 Where **slot_uuid** is the bridge between the specific row in this table and the specific slot of time for this **product_variation**.
 
-The second step was to think of something that changes dynamically the price of a product based on specific conditions (the current time). This "something" is the **price resolver** (this is the documentation: \[LINK]).
+The second step was to think of something that changes dynamically the price of a product based on specific conditions (the current time). This "something" is the **price resolver** (this is the documentation: <https://docs.drupalcommerce.org/commerce2/developer-guide/pricing/price-resolvers>).
 
 Essentially: the price of a product is calculated dynamically by one or more price resolvers. You can use the resolver to write your module or use some other contrib modules (like Pricelist - before this custom module I read about this module but it doesn't fit my needs).
 
@@ -234,7 +234,7 @@ The code is simple:
 * For every slot (the configuration) we compare the current time with all the start and end times retrieved;
 * If the current time is between the start and end times of one of the slots, we return the Price object with the number and currency code specified in the record only if is set the specific UUID in the results array of the query;
 
-The third step has been the most difficult for me. The search fell on the order processor (link to the documentation: \[LINK]). Also in this case the order processor can be registered as a simple service in the previously cited file.
+The third step has been the most difficult for me. The search fell on the order processor (link to the documentation: <https://docs.drupalcommerce.org/commerce2/developer-guide/orders/order-refresh-and-process>). Also in this case the order processor can be registered as a simple service in the previously cited file.
 
 I think this solves the problem: using the order processor we can apply fees or bonuses during the order processing, so using a specific bonus that will be ever equivalent to the shipping cost, we can cancel dynamically the shipping cost itself. In particular, the object that can make this magic possible is called an **adjustment**.
 
