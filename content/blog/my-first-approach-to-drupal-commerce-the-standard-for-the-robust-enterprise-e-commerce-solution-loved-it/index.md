@@ -40,6 +40,7 @@ The first element I created was the configuration form. The structure of the con
 
 ```yaml
 product_variation_name:
+  enabled:         # boolean
   times:
     start_time:    # time
     end_time:      # time
