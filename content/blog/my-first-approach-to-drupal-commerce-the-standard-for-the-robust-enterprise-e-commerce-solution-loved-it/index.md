@@ -28,6 +28,8 @@ An example:
 
 The default price should be used for the product in any other case.
 
+Let's suppose that you are visiting the product page of a product (a pair of shoes) during the morning, between **08:00-12:00**, so you should see the price of **10.25€**; instead, if you are visiting the same product page between **21:00-00:00** you should see the default price (the price set on the product).
+
 ### How I made it:
 
 I used Drush generate to create the prototype of the module, and I continued to use it to create the element of my module, such as services, controllers, and so on. I suggest you use this tool in every Drupal development process: \[more link]
