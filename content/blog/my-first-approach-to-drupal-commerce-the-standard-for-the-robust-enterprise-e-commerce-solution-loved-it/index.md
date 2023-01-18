@@ -36,6 +36,8 @@ Again, let's suppose that you are buying this pair of shoes between **12:00-18:0
 
 I used Drush generate to create the prototype of the module, and I continued to use it to create the elements of my module, such as services, controllers, and so on. I suggest you use this tool in every Drupal development process: [here is the documentation](https://www.drush.org/latest/commands/generate/).
 
+#### 1° step: the form and the alter form
+
 The first element I created was the configuration form. The structure of the configuration saved thanks to this form is the following:
 
 ```yaml
@@ -106,6 +108,8 @@ I saved this information in the configurations because this should not be change
 ![commerce_product_variation_slots_data table for prices](schermata-del-2023-01-18-20-41-35.png "commerce_product_variation_slots_data table for prices")
 
 Where **slot_uuid** is the bridge between the specific row in this table and the specific slot of time for this **product_variation**.
+
+#### 2° step: the Price Resolver
 
 The second step was to think of something that changes dynamically the price of a product based on specific conditions (the current time). This "something" is the **price resolver** (this is the documentation: <https://docs.drupalcommerce.org/commerce2/developer-guide/pricing/price-resolvers>).
 
@@ -234,6 +238,8 @@ The code is simple:
 * We load all the configuration information based on the bundle (the product variation);
 * For every slot (the configuration) we compare the current time with all the start and end times retrieved;
 * If the current time is between the start and end times of one of the slots, we return the Price object with the number and currency code specified in the record only if is set the specific UUID in the results array of the query;
+
+#### 3° step: the Order Processor
 
 The third step has been the most difficult for me. The search fell on the order processor (link to the documentation: <https://docs.drupalcommerce.org/commerce2/developer-guide/orders/order-refresh-and-process>). Also in this case the order processor can be registered as a simple service in the previously cited file.
 
@@ -369,6 +375,6 @@ All the other things of the module are siding things, such as permissions, routi
 
 Today, the slot is fixed to the number of four, but one day can be added Ajax handlers to make time slots dynamically added or removed for each product variation (on the module configuration page).
 
-Again, add unit test (or test in general) to make sure that the code works properly in every case.
+Again, add unit tests (or tests in general) to make sure that the code works properly in every case.
 
-And again, dynamically create a **Shipment method** (for the free shipping bonus) so that in the checkout process we can use it (instead of the bonus - more suitable for discount or gift cards).
+And again, dynamically create a **Shipment method** (for the free shipping bonus) so that in the checkout process we can use it (instead of the bonus - more suitable for discounts or gift cards).
