@@ -368,6 +368,6 @@ All the other things of the module are siding things, such as permissions, routi
 
 Today, the slot is fixed to the number of four, but one day can be added Ajax handlers to make time slots dynamically added or removed for each product variation (on the module configuration page).
 
-Again, add unit test (or test in general) to make sure that the code works properly in every case;
+Again, add unit test (or test in general) to make sure that the code works properly in every case.
 
-And again, dynamically create a **Shipment method** (for the free shipping bonus) so that in the checkout process we can use it (instead of the bonus - more suitable for discount or gift cards);
+And again, dynamically create a **Shipment method** (for the free shipping bonus) so that in the checkout process we can use it (instead of the bonus - more suitable for discount or gift cards).
