@@ -102,13 +102,7 @@ Of course, this structure is repeated for each product variation type (retrieved
 
 I saved this information in the configurations because this should not be changed in the future so frequently. Instead, the thing that can be changed much more often will be the price for every product in the specific slot of time. This is the reason I created a custom table with the following columns:
 
-id\
-product_variation_sku\
-product_variation\
-slot_uuid\
-number\
-currency_code\
-created
+![commerce_product_variation_slots_data table for prices](schermata-del-2023-01-18-20-41-35.png "commerce_product_variation_slots_data table for prices")
 
 Where **slot_uuid** is the bridge between the specific row in this table and the specific slot of time for this **product_variation**.
 
