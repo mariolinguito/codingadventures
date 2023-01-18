@@ -362,7 +362,7 @@ class FreeShippingOrderProcessor implements OrderProcessorInterface {
 
 Given these considerations, free shipping will be applied only if in the order there is at least one of the product of product variations enabled in the configuration of the module.
 
-All the other things of the module are siding things, such as permissions, routing, info files, etc. You can give a look at the whole code and structure on my GitHub repository: here \[LINK].
+All the other things of the module are siding things, such as permissions, routing, info files, etc. You can give a look at the whole code and structure on my GitHub repository: [here](https://github.com/mariolinguito/price-in-time).
 
 ### What can be improved:
 
