@@ -147,6 +147,10 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Datetime\DrupalDateTime;
 
+/**
+ * Check for price adjustment based on time slot (and
+ * current time).
+ */
 class PriceResolver implements PriceResolverInterface {
 
   /**
@@ -213,15 +217,15 @@ class PriceResolver implements PriceResolverInterface {
   }
 
   /**
-   * 
+   *
    * @param array $results
    * @param string $bundle
    * @return Price
-   * 
+   *
    * Return the price of the specific slot of time (based on the
    * current time). This will return the price everytime because
    * we check the existence of the record before.
-   * 
+   *
    */
   private function getCurrentTimeSlotPrice($results, $bundle) {
     $bundle_settings = $this->config_factory->get($bundle);
