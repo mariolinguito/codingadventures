@@ -18,8 +18,7 @@ However, I suggest to all developer, programmers (yes, it is not the same thing)
 
 Some resources to start: 
 
-* [](https://www.hackerrank.com/)[Hacker Rank](https://www.hackerrank.com/),
-* [Daily Coding Problem](https://www.dailycodingproblem.com/), 
-* [Code With Mario](https://www.youtube.com/channel/UCDpKD0K9Uh9Pgop87d5qgeQ/);
+* [](https://www.hackerrank.com/)[Hacker Rank](https://www.hackerrank.com/);
+* [Daily Coding Problem](https://www.dailycodingproblem.com/);
 
 *Best regards guys.*
