@@ -7,9 +7,7 @@ The most comprehensive explanation of the module comes from the official project
 
 Imagine that we have three environments such as **local**, **testing** and **production**; and that you created a custom module \[my-best-module] in which there is a config form with some different fields: *field_key* and *field_secrets*. The value of these fields should change for every environment we have to manage.
 
-How do you manage to do it?
-
-Using **Config Split!**
+How do you manage to do it? Using **Config Split!**
 
 ## Create the different environments:
 
