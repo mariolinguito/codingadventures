@@ -32,8 +32,8 @@ In particular, *config/default* should be the folder in which you exported all t
 
 
 
-Ok, now we can create the settings!
+Okay, now we can create the settings [go to */admin/config/development/configuration/config-split*]; but we will make only one example in this instance, but you can replicate it for every other environment.
 
-We will make only one example in this instance, but you can replicate it for every other environment.
+The first part we can set is the **storage type**:
 
-The first part we can set is the **storage type**
+![Settings for the storage type](configutations_settings.png "Settings for the storage type")
