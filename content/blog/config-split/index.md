@@ -33,3 +33,9 @@ The first part we can set is the **storage type**:
 In this case, I chose a folder, specifically the corresponding folder for **local**. Every YML file for local will be put in this folder.
 
 Let's skip the setup of the activation/or not of the setting because this is the task of the written code into **settings.local.php** and go on to the most important sections.
+
+In the complete split section, we have some ways to split:
+
+1. We can choose to split a complete module and its configuration files \[example: devel, which should be enabled only on a local environment];
+2. We can choose to split a specific YML file \[example: system.logging.yml, to save all messages, with backtrace information but not in production];
+3. We can choose to split specific YML files we can write directly in textarea: such as our fields mentioned before];
