@@ -1,6 +1,6 @@
 ---
-title: Config-Split
+title: A simple guide to splitting with Config Split in Drupal
 date: 2024-06-15T12:51:07.862Z
-description: Config-Split
+description: A simple guide to splitting with Config Split in Drupal
 ---
-Config-Split
+\[TBD]
