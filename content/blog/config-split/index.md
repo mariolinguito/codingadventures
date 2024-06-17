@@ -24,16 +24,12 @@ In particular, *config/default* should be the folder in which you exported all t
 
 ![Structure of folder for configurations](folder_sync.png "Structure of folder for configurations")
 
-
-
-
-
-
-
-
-
 Okay, now we can create the settings [go to */admin/config/development/configuration/config-split*]; but we will make only one example in this instance, but you can replicate it for every other environment.
 
 The first part we can set is the **storage type**:
 
 ![Settings for the storage type](configutations_settings.png "Settings for the storage type")
+
+In this case, I chose a folder, specifically the corresponding folder for **local**. Every YML file for local will be put in this folder.
+
+Let's skip the setup of the activation/or not of the setting because this is the task of the written code into **settings.local.php** and go on to the most important sections.
