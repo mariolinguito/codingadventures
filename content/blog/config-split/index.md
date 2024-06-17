@@ -5,7 +5,7 @@ description: A simple guide to splitting with Config Split in Drupal
 ---
 The most comprehensive explanation of the module comes from the official project page [[this](https://www.drupal.org/project/config_split)]: *"This module allows to define sets of configuration that will get exported to separate directories when exporting, and get merged together when importing. It is possible to define in settings.php which of these sets should be active and considered for the export and import."*
 
-Imagine that we have three environments such as **local**, **testing** and **production**; and that you created a custom module \[my-best-module] in which there is a config form with some different fields: *field_key* and *field_secrets*. The value of these fields should change for every environment we have to manage.
+Imagine that we have three environments: **local**, **testing** and **production**; and that you created a custom module \[my-best-module] in which there is a config form with fields: *field_key* and *field_secrets*. The value of these fields should change for every environment we have to manage.
 
 How do you manage to do it? Using **Config Split!**
 
