@@ -1,7 +1,10 @@
 ---
-title: A simple guide to splitting with Config Split in Drupal
-date: 2024-06-30T10:27:26.891Z
-description: A simple guide to splitting with Config Split in Drupal
+title: A simple guide to splitting with Config Split in Drupal CMS
+date: 2024-06-30T15:10:45.804Z
+description: "In simple words: This module allows to define sets of
+  configuration that will get exported to separate directories when exporting,
+  and get merged when importing. It is possible to define in settings.php which
+  of these sets should be active and considered for the export and import."
 ---
 The most comprehensive explanation of the module comes from the official project page [[this](https://www.drupal.org/project/config_split)]: *"This module allows to define sets of configuration that will get exported to separate directories when exporting, and get merged when importing. It is possible to define in settings.php which of these sets should be active and considered for the export and import."*
 
