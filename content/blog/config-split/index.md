@@ -129,3 +129,7 @@ Using Config Ignore you can specify the whole configuration file \[YML] you want
 Of course, this doesn't want to be an exhaustive guide about how to use Config Split in any circumstances but wants to be a simple tutorial about how I used Config Split for some of my cases.
 
 On the Internet, there is a huge amount of information about Config Split, videos and tutorials, like this: [Drupal Con Vienna](https://events.drupal.org/vienna2017/sessions/advanced-configuration-management-config-split-et-al).
+
+### Tip:
+
+You can use [Configuration Read-only mode](https://www.drupal.org/project/config_readonly) to make sure that the configuration will not change in the production environment.
