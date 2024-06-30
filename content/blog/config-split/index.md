@@ -42,6 +42,12 @@ In the complete split section, we have some ways to split:
 
 In my case, I choose to split completely [Devel](https://www.drupal.org/project/devel) and [Devel Entity Updates](https://www.drupal.org/project/devel_entity_updates) modules, to make this module active only in the **development** environment. In the same way, in the production environment, we want active, for example, the [OpenID Connect](https://www.drupal.org/project/openid_connect) module.
 
+Now, you can export all the configurations with the usual CLI command:
+
+**drush cex --no-interation**
+
+
+
 ## Install Dotenv and switch to the right env:
 
 In Drupal, we can use a **.env** file in which we can specify all the env-dependent variables, such as the specific env. An example can be the following: 
