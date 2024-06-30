@@ -120,9 +120,17 @@ Using this, every time we import the configuration files [using **drush cim**], 
 
 An example, you want to connect different IDPs for testing and production. Of course, client ID and secret should be different.
 
-So we can accomplish this using a partial split of the YML file: **openid_connect.settings.generic.yml**
+So we can accomplish this using a partial split of the YML file both in **testing** and **production** configuration-env: **openid_connect.settings.generic.yml**
 
 ![Partial split of OpenID Connect generic client](partial_split-generic.png "Partial split of OpenID Connect generic client")
+
+So, in production we can have this configuration:
+
+![OpenID Connect configuration for production](generic_production.png "OpenID Connect configuration for production")
+
+While in testing we have:
+
+![OpenID Connect configuration for testing](generic_testing.png "OpenID Connect configuration for testing")
 
 ## And for the sensitive data?
 
