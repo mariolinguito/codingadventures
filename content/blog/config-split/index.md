@@ -115,3 +115,9 @@ Using this, every time we import the configuration files [using **drush cim**], 
 **In local**: enable Devel and Devel Entity Updates, and disable OpenID Connect;
 
 ## And for the sensitive data?
+
+TBD
+
+## More simple alternative:
+
+If you only want to ignore some specific configurations, you do not need to configure all the Config Split; you need [Config Ignore](https://www.drupal.org/project/config_ignore).
