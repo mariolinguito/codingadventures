@@ -116,6 +116,10 @@ Using this, every time we import the configuration files [using **drush cim**], 
 
 **In local**: enable Devel and Devel Entity Updates, and disable OpenID Connect;
 
+### If you want a different value for the same key?
+
+
+
 ## And for the sensitive data?
 
 If you have sensitive data, like the well-known configuration of your IDP, you can use the option Database for the Storage type inside the Config Split environment configuration.
