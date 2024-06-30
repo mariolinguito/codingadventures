@@ -113,3 +113,5 @@ Using this, every time we import the configuration files [using **drush cim**], 
 **In production**: disable Devel and Devel Entity Updates, and enable OpenID Connect \[with all dependencies and configurations];
 
 **In local**: enable Devel and Devel Entity Updates, and disable OpenID Connect;
+
+## And for the sensitive data?
