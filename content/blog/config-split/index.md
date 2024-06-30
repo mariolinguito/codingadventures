@@ -118,7 +118,11 @@ Using this, every time we import the configuration files [using **drush cim**], 
 
 ### If you want a different value for the same key?
 
+An example, you want to connect different IDPs for testing and production. Of course, client ID and secret should be different.
 
+So we can accomplish this using a partial split of the YML file: **openid_connect.settings.generic.yml**
+
+![Partial split of OpenID Connect generic client](partial_split-generic.png "Partial split of OpenID Connect generic client")
 
 ## And for the sensitive data?
 
