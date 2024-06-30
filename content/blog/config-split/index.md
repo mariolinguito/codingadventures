@@ -132,6 +132,8 @@ While in testing we have:
 
 ![OpenID Connect configuration for testing](generic_testing.png "OpenID Connect configuration for testing")
 
+In the end, we have the same module enabled in both environments but with different information.
+
 ## And for the sensitive data?
 
 If you have sensitive data, like the well-known configuration of your IDP, you can use the option Database for the Storage type inside the Config Split environment configuration.
