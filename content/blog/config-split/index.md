@@ -21,7 +21,7 @@ Before the settings of Config Split, we need to create the folders in which the 
 
 In this case, we can have three folders:
 
-* *config/default \[the previous config/sync]*
+* *config/default*
 * *config/local*
 * *config/testing*
 * *config/production*
