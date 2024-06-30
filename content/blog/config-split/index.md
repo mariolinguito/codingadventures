@@ -123,3 +123,7 @@ TBD
 If you only want to ignore some specific configurations, you do not need to configure all the Config Split; you need [Config Ignore](https://www.drupal.org/project/config_ignore). 
 
 Using Config Ignore you can specify the whole configuration file \[YML] you want to ignore for the other environments.
+
+## Final considerations:
+
+Of course \[TBD]
