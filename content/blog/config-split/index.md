@@ -40,4 +40,6 @@ In the complete split section, we have some ways to split:
 2. We can choose to split a specific YML file [example: *system.logging.yml*, to save all messages, with backtrace information but not in production];
 3. We can choose to split specific YML files we can write directly in textarea: such as our fields mentioned before];
 
-In my case, I choose to split completely [Devel](https://www.drupal.org/project/devel) and [Devel Entity Updates](https://www.drupal.org/project/devel_entity_updates) modules, to make this module active only in the development environment.
+In my case, I choose to split completely [Devel](https://www.drupal.org/project/devel) and [Devel Entity Updates](https://www.drupal.org/project/devel_entity_updates) modules, to make this module active only in the **development** environment. In the same way, in the production environment, we want active, for example, the [OpenID Connect](https://www.drupal.org/project/openid_connect) module.
+
+## Install Dotenv and switch to the right env:
