@@ -116,7 +116,9 @@ Using this, every time we import the configuration files [using **drush cim**], 
 
 ## And for the sensitive data?
 
-TBD
+If you have sensitive data, like the well-known configuration of your IDP, you can use the option Database for the Storage type inside the Config Split environment configuration.
+
+This option uses a \[...] *dedicated table in the database. Select this option if the split should not be shared (it will be included in database dumps).*
 
 ## More simple alternative:
 
