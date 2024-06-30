@@ -1,5 +1,6 @@
 ---
-title: A simple guide to splitting with Config Split in Drupal CMS
+title: A simple guide to splitting configurations with the power of Config Split
+  in Drupal CMS
 date: 2024-06-30T15:10:45.804Z
 description: "In simple words: This module allows to define sets of
   configuration that will get exported to separate directories when exporting,
