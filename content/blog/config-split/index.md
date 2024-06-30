@@ -46,7 +46,11 @@ Now, you can export all the configurations with the usual CLI command:
 
 **drush cex --no-interation**
 
+Then you should export the env-specific configuration files using the CLI command [you can see the complete documentation [here](https://www.drupal.org/docs/8/modules/configuration-split)]:
 
+**drush config-split:export {specific environment}**
+
+Note that you should activate in advance the environment you want to export.
 
 ## Install Dotenv and switch to the right env:
 
