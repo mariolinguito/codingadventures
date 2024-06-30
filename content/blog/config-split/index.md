@@ -44,7 +44,7 @@ In my case, I choose to split completely [Devel](https://www.drupal.org/project/
 
 Now, you can export all the configurations with the usual CLI command:
 
-**drush cex --no-interation**
+**drush cex --no-interaction**
 
 Then you should export the env-specific configuration files using the CLI command [you can see the complete documentation [here](https://www.drupal.org/docs/8/modules/configuration-split)]:
 
@@ -119,6 +119,8 @@ Using this, every time we import the configuration files [using **drush cim**], 
 If you have sensitive data, like the well-known configuration of your IDP, you can use the option Database for the Storage type inside the Config Split environment configuration.
 
 This option uses a \[...] *dedicated table in the database. Select this option if the split should not be shared (it will be included in database dumps).*
+
+Of course, this is not the final solution. To make more secure the information, you should hash it before saving.
 
 ## More simple alternative:
 
