@@ -126,4 +126,6 @@ Using Config Ignore you can specify the whole configuration file \[YML] you want
 
 ## Final considerations:
 
-Of course \[TBD]
+Of course, this doesn't want to be an exhaustive guide about how to use Config Split in any circumstances but wants to be a simple tutorial about how I used Config Split for some of my cases.
+
+On the Internet, there is a huge amount of information about Config Split, videos and tutorials, like this: [Drupal Con Vienna](https://events.drupal.org/vienna2017/sessions/advanced-configuration-management-config-split-et-al).
