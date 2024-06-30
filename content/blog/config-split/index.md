@@ -107,3 +107,9 @@ if (isset($_ENV['APP_ENV'])) {
   }
 }
 ```
+
+Using this, every time we import the configuration files [using **drush cim**], Config Split choose the right environment \[from the .env] and makes the changes we want for that specific environment. 
+
+**In production**: disable Devel and Devel Entity Updates, and enable OpenID Connect \[with all dependencies and configurations];
+
+**In local**: enable Devel and Devel Entity Updates, and disable OpenID Connect;
