@@ -16,9 +16,9 @@ Before the settings of Config Split, we need to create the folders in which the 
 In this case, we can have three folders:
 
 * *config/default \[the previous config/sync]*
-* *config/**local***
-* *config/**testing***
-* *config/**production***
+* *config/local*
+* *config/testing*
+* *config/production*
 
 In particular, *config/default* should be the folder in which you exported all the configurations, so the folder we set in **settings.local.php**
 
@@ -47,8 +47,8 @@ In my case, I choose to split completely [Devel](https://www.drupal.org/project/
 In Drupal, we can use a **.env** file in which we can specify all the env-dependent variables, such as the specific env. An example can be the following: 
 
 ```yaml
-# Environment.
-APP_ENV=
+# Environment: local, testing, production.
+APP_ENV=production
 
 # DB information.
 DB_NAME=
