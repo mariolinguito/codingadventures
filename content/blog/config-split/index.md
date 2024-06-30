@@ -7,6 +7,8 @@ The most comprehensive explanation of the module comes from the official project
 
 Imagine that we have three environments: **local**, **testing** and **production**; and you created a custom module with a config form with fields: *field_key* and *field_secrets*. The value of these fields should change for every environment we have to manage.
 
+Again, imagine that we want to enable specific modules in a developing environment, but we do not want these modules in the production environment because of performance.
+
 How do you manage to do it? Using **Config Split!**
 
 ## Create the different environments:
