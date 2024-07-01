@@ -130,11 +130,11 @@ So we can accomplish this using a partial split of the YML file both in **testin
 
 ![Partial split of OpenID Connect generic client](partial_split-generic.png "Partial split of OpenID Connect generic client")
 
-So, in production we can have this configuration:
+So, in **production** we can have this configuration:
 
 ![OpenID Connect configuration for production](generic_production.png "OpenID Connect configuration for production")
 
-While in testing we have:
+While in **testing** we have:
 
 ![OpenID Connect configuration for testing](generic_testing.png "OpenID Connect configuration for testing")
 
