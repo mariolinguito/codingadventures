@@ -34,9 +34,9 @@ Okay, now we can create the settings [go to */admin/config/development/configura
 
 The first part we can set is the **storage type**:
 
-![Settings for the storage type](configutations_settings.png "Settings for the storage type")
+![Storage type for the testing environment](storage_type.png "Storage type for the testing environment")
 
-In this case, I chose a folder, specifically the corresponding folder for **local**. Every YML file for local will be put in this folder.
+In this case, I chose a folder, specifically the corresponding folder for **testing**. Every YML file for local will be put in this folder.
 
 Let's skip the setup of the activation/or not of the setting because this is the task of the written code into **settings.local.php** and go on to the most important sections.
 
@@ -47,6 +47,8 @@ In the complete split section, we have some ways to split:
 3. We can choose to split specific YML files we can write directly in textarea: such as our fields mentioned before];
 
 In my case, I choose to split completely [Devel](https://www.drupal.org/project/devel) and [Devel Entity Updates](https://www.drupal.org/project/devel_entity_updates) modules, to make this module active only in the **development** environment. In the same way, in the production environment, we want active, for example, the [OpenID Connect](https://www.drupal.org/project/openid_connect) module.
+
+![Settings for the storage type](configutations_settings.png "Settings for the storage type")
 
 Now, you can export all the configurations with the usual CLI command:
 
