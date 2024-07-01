@@ -122,7 +122,7 @@ Using this, every time we import the configuration files [using **drush cim**], 
 
 ### If you want a different value for the same key?
 
-An example, you want to connect different IDPs for testing and production. Of course, client ID and secret should be different.
+For example, you want to connect different IDPs for testing and production. Of course, client ID and secret should be different.
 
 So we can accomplish this using a partial split of the YML file both in **testing** and **production** configuration-env: **openid_connect.settings.generic.yml**
 
@@ -144,7 +144,7 @@ If you have sensitive data, like the well-known configuration of your IDP, you c
 
 This option uses a \[...] *dedicated table in the database. Select this option if the split should not be shared (it will be included in database dumps).*
 
-Of course, this is not the final solution. To make more secure the information, you should hash it before saving.
+Of course, this is not the final solution. To make the information more secure, you should hash it before saving.
 
 ## More simple alternative:
 
@@ -154,14 +154,10 @@ Using Config Ignore you can specify the whole configuration file \[YML] you want
 
 ## Final considerations:
 
-Of course, this doesn't want to be an exhaustive guide about how to use Config Split in any circumstances but wants to be a simple tutorial about how I used Config Split for some of my cases.
+Of course, this doesn't want to be an exhaustive guide about how to use Config Split in any circumstances but it wants to be a simple tutorial about how I used Config Split for some of my cases.
 
 On the Internet, there is a huge amount of information about Config Split, videos and tutorials, like this: [Drupal Con Vienna](https://events.drupal.org/vienna2017/sessions/advanced-configuration-management-config-split-et-al).
 
 ### Tip:
 
 You can use [Configuration Read-only mode](https://www.drupal.org/project/config_readonly) to make sure that the configuration will not change in the production environment.
-
-### Tip:
-
-\[TBD: composer]
