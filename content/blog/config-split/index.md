@@ -161,3 +161,7 @@ On the Internet, there is a huge amount of information about Config Split, video
 ### Tip:
 
 You can use [Configuration Read-only mode](https://www.drupal.org/project/config_readonly) to make sure that the configuration will not change in the production environment.
+
+### Tip:
+
+\[TBD: composer]
