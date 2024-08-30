@@ -346,3 +346,5 @@ At the bottom, there are some sources that you can read to clarify your idea abo
 * <https://github.com/lando/mssql/issues/36>
 * <https://github.com/lando/lando/issues/1796>
 * <https://docs.lando.dev/>
+* <https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16>
+* <https://www.drupal.org/project/sqlsrv>
