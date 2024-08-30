@@ -306,9 +306,7 @@ The purpose of this section is to check the **/mssql/init/** folder for any file
 
 In the middle part of the script, we create the user \[with the password] that is specified by environment variables and give it the privileges on the database.
 
-To test our new user, we can use DBeaver [[here](https://dbeaver.io/) the official page]:
-
-
+Now you can run your `lando start` or `lando rebuild` to bootstrap everything and start to develop your next great application!
 
 ## Conclusions
 
