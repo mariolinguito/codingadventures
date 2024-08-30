@@ -298,7 +298,13 @@ fi
 
 The purpose of this section is to check the **/mssql/init/** folder for any files and ensure they are named **init.bak**. If the folder contains only init.bak files, it proceeds to restore the database from the backup file. The `RESTORE DATABASE` command restores the database, moving the data and log files to the specified paths. If the folder is empty or contains files other than init.bak, it skips the restoration process.
 
+## Conclusions
 
+In the end, I need to say that this is not the best approach ever, but it can be a starting point to make something greater than this.
+
+So, I hope that this mini-tutorial article can help you in the fight against SQL-Server \[we are joking! Microsoft a lot of thanks for WSL! :-]
+
+At the bottom, there are some sources that you can read to clarify your idea about this topic.
 
 ## Some sources
 
