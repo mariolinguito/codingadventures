@@ -224,7 +224,7 @@ In the folder called **init**,we can put a BAK file that we want to import durin
 
 Note that the name of the BAK needs to be **init.bak** to make the script work well \[you will see now why].
 
-### The real script:
+### The real script \[configure-db.sh]:
 
 ```shell
 #!/bin/bash
