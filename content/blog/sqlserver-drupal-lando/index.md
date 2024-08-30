@@ -231,7 +231,6 @@ else
     echo ".lando.env file not found."
 fi
 
-
 # Use the environment variables.
 echo "Reading ENV variables..."
 echo "*************************"
@@ -241,38 +240,13 @@ echo "DB data: $MSSQL_DBDATA"
 echo "DB log: $MSSQL_DBLOG"
 echo "*************************"
 
-
 # Create a new database on lando rebuild.
 sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = '$MSSQL_DBNAME') BEGIN CREATE DATABASE $MSSQL_DBNAME; END"
 
-echo "**SLEEPING FOR 3 SECONDS**"
-sleep 3
-
-# Create user and password.
-sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "USE $MSSQL_DBNAME; CREATE LOGIN $MSSQL_USERNAME WITH PASSWORD = '$MSSQL_PASSWORD'"
-
-echo "**SLEEPING FOR 3 SECONDS**"
-sleep 3
-
-# Create a login for specific database.
-sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "CREATE USER $MSSQL_USERNAME FOR LOGIN $MSSQL_USERNAME"
-
-echo "**SLEEPING FOR 3 SECONDS**"
-sleep 3
-
-# Assign role to database.
-sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "ALTER ROLE db_owner ADD MEMBER $MSSQL_USERNAME; ALTER ROLE db_datareader ADD MEMBER $MSSQL_USERNAME; ALTER ROLE db_datawriter ADD MEMBER $MSSQL_USERNAME"
-
-echo "**SLEEPING FOR 3 SECONDS**"
-sleep 3
-
-# Set autoclose for the database.
-sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "ALTER DATABASE $MSSQL_DBNAME SET AUTO_CLOSE OFF"
-
+echo "Eventually init the database..."
 
 # Define the folder path
 folder_path="/mssql/init/"
-
 
 # Check if the folder contains only files named init.bak
 if [ -n "$(ls -A "$folder_path")" ] && [ -z "$(ls -A "$folder_path" | grep -v '^init\.bak$')" ]; then
@@ -283,6 +257,34 @@ if [ -n "$(ls -A "$folder_path")" ] && [ -z "$(ls -A "$folder_path" | grep -v '^
 else
     echo "Folder is not full of init.bak files or is empty."
 fi
+
+echo "**SLEEPING FOR 3 SECONDS**"
+echo "Creating user and password..."
+sleep 3
+
+# Create user and password.
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "USE $MSSQL_DBNAME; CREATE LOGIN $MSSQL_USERNAME WITH PASSWORD = '$MSSQL_PASSWORD'"
+
+echo "**SLEEPING FOR 3 SECONDS**"
+echo "Creating a login for specific database..."
+sleep 3
+
+# Create a login for specific database.
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "USE $MSSQL_DBNAME; CREATE USER $MSSQL_USERNAME FOR LOGIN $MSSQL_USERNAME"
+
+echo "**SLEEPING FOR 3 SECONDS**"
+echo "Assigning role to database..."
+sleep 3
+
+# Assign role to database.
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "USE $MSSQL_DBNAME; ALTER ROLE db_owner ADD MEMBER $MSSQL_USERNAME;"
+
+echo "**SLEEPING FOR 3 SECONDS**"
+echo "Setting autoclose for the database..."
+sleep 3
+
+# Set autoclose for the database.
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "ALTER DATABASE $MSSQL_DBNAME SET AUTO_CLOSE OFF"
 ```
 
 Okay, all good, but let me explain some pieces of the code \[at least the darkest ones]:
