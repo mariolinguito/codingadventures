@@ -213,7 +213,7 @@ MSSQL_DBDATA=drupal10_Data
 MSSQL_DBLOG=drupal10_Log
 ```
 
-You can change them and add your env variables based on your needs and your application.
+You can change them and add your env variables based on your needs and your application. Of course, this file should be read only by you because it contains sensitive data: protect it as best you can!
 
 ### Initializing the database with BAK:
 
