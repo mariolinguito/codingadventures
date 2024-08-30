@@ -90,23 +90,27 @@ hooks:
     - lando drush updb # Run database updates after importing data
 ```
 
-1. **`name`**: Define the name of your Lando project.
+
+
+1. **`name`**: define the name of your Lando project.
 2. **`services`**: 
 
-   * `appserver`: Defines the PHP service, which is used to run the Drupal site. You can customize PHP settings and extensions as needed.
-   * `database`: Defines the MySQL database service with environment variables for root password, database name, and user credentials.
-   * `redis`: Optional service for caching, if you use Redis.
-   * `solr`: Optional service for search, if you use Apache Solr.
+   * `appserver`: defines the PHP service, which is used to run the Drupal site. You can customize PHP settings and extensions as needed.
+   * `database`: defines the MySQL database service with environment variables for root password, database name, and user credentials.
+   * `redis`: optional service for caching, if you use Redis.
+   * `solr`: optional search service, if you use Apache Solr.
 3. **`tooling`**: 
 
-   * `drush`: Tool to run Drush commands (Drupal shell).
-   * `composer`: Tool to run Composer commands for managing PHP dependencies.
+   * `drush`: a tool to run Drush commands (Drupal shell).
+   * `composer`: a tool to run Composer commands for managing PHP dependencies.
 4. **`config`**: 
 
-   * `webroot`: Specifies the root directory for your Drupal site.
-   * `xdebug`: Enables Xdebug for debugging (optional).
-   * `mailhog`: Enables Mailhog for catching emails sent by Drupal (optional).
+   * `webroot`: specifies the root directory for your Drupal site.
+   * `xdebug`: enables Xdebug for debugging (optional).
+   * `mailhog`: enables Mailhog to catch emails sent by Drupal (optional).
 5. **`hooks`**: 
 
-   * `post-start`: Commands to run after the Lando environment starts.
-   * `post-import`: Commands to run after importing a database or other data.
+   * `post-start`: commands to run after the Lando environment starts.
+   * `post-import`: commands to run after importing a database or other data.
+
+If you want to make this in pure Docker, ehm, it will be very complex!
