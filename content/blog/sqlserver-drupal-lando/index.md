@@ -191,9 +191,23 @@ If you are looking at **lines 37 to 42**, let me explain. I need a method to cre
 
 Using overrides we mount the *~/.lando/mssql* directory from your local machine into the */mssql* directory inside the container. This means that any files in *~/.lando/mssql* on your host machine will be accessible in the container at the */mssql* path.
 
-In the folder we have:
+In this folder, we have:
 
 ![Structure of folder mssql](screenshot-2024-08-30-210502.png "Structure of folder mssql")
+
+Following the structure shown, in the env directory, we have a specific env file in which we can write all environment variables we need, like this:
+
+```yaml
+# MSSQL envs.
+#
+MSSQL_USERNAME=drupal10
+MSSQL_PASSWORD=ZsL82k*bn
+MSSQL_DBNAME=drupal10
+MSSQL_DBDATA=drupal10_Data
+MSSQL_DBLOG=drupal10_Log
+```
+
+
 
 ## Some sources
 
