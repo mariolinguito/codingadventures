@@ -90,7 +90,7 @@ hooks:
     - lando drush updb # Run database updates after importing data
 ```
 
-
+### Some explanation about this YAML:
 
 1. **`name`**: define the name of your Lando project.
 2. **`services`**: 
