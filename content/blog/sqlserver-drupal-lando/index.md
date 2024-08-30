@@ -185,8 +185,6 @@ events:
   - appserver: composer require drupal/sqlsrv
 ```
 
-
-
 If you are looking at **lines 37 to 42**, let me explain. I need a method to create a user \[different from sa] and give some privileges. Again, I want to make this using environment variables.
 
 Again, using overrides we mount the *~/.lando/mssql* directory from your local machine into the */mssql* directory inside the container. This means that any files in *~/.lando/mssql* on your host machine will be accessible in the container at the */mssql* path.
@@ -253,6 +251,8 @@ sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "CREATE USER $MSSQL_USERNAME FOR
 
 # Assign role to database.
 sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "ALTER ROLE db_owner ADD MEMBER $MSSQL_USERNAME"
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "ALTER ROLE db_datareader ADD MEMBER $MSSQL_USERNAME"
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "ALTER ROLE db_datawriter ADD MEMBER $MSSQL_USERNAME"
 
 # Set autoclose for the database.
 sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "ALTER DATABASE $MSSQL_DBNAME SET AUTO_CLOSE OFF"
