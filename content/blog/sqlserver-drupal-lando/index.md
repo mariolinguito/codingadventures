@@ -1,6 +1,6 @@
 ---
 title: If you want to use Lando with SQL-Server on Drupal without going crazy
-date: 2024-08-28T14:59:31.954Z
+date: 2024-08-30T21:11:09.058Z
 description: If you want to use SQL-Server by Microsoft on your Lando
   environment, you may encounter several difficulties.
 ---
