@@ -189,15 +189,18 @@ If you are looking at **lines 37 to 42**, let me explain. I need a method to cre
 
 Again, using overrides we mount the *~/.lando/mssql* directory from your local machine into the */mssql* directory inside the container. This means that any files in *~/.lando/mssql* on your host machine will be accessible in the container at the */mssql* path.
 
-In this folder, we have:\
+In this folder, we have:
 
+```shell
+│
 ├── configure-db.sh
 ├── env
 │   └── .lando.env
 └── init
     └── init.bak
+```
 
-2 directories, 3 files
+In particular: 2 directories and 3 files.
 
 ### Environment variables:
 
