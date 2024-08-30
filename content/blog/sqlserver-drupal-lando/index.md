@@ -131,6 +131,62 @@ But it is not so easy. You need to configure something to make this work well.
 2. To use SQL-Server with Drupal, again, you need two PHP extensions: **sqlsrv** and **pdo_sqlsrv**; this means that you need to install them on your appserver service. Thanks to an issue reported by a user called mikemilano we can make that;
 3. We need to automate some boring stuff, like the import of a database with BAK init file and some like this \[I make a script that can help us];
 
+All of this becomes this YAML file:
+
+```yaml
+name: drupal-with-sqlserver
+recipe: drupal10
+config:
+  webroot: web
+  database: sqlserver
+services:
+  appserver:
+    type: php:8.1
+    build_as_root:
+      - apt-get update -y
+      - apt-get install apt-transport-https -y
+      - curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+      - curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
+      - apt-get update -y
+      - ACCEPT_EULA=Y apt-get install -y msodbcsql18
+      - apt-get install unixodbc-dev -y
+      - pecl install sqlsrv
+      - pecl install pdo_sqlsrv
+      - docker-php-ext-enable sqlsrv
+      - docker-php-ext-enable pdo_sqlsrv
+  database:
+    type: mssql
+    creds:
+      password: {your_sa_password}
+    healthcheck: "sqlcmd -U sa -H sqlserver -P {your_sa_password} -Q quit -N o"
+    path:
+      - '/usr/local/sbin'
+      - '/usr/local/bin'
+      - '/usr/sbin'
+      - '/usr/bin'
+      - '/sbin'
+      - '/bin'
+      - '/opt/mssql-tools18/bin'
+
+# NOT USED ANYMORE.
+#   version: '2019-latest'
+
+    portforward: 10433
+    run_as_root:
+      - chmod +x /mssql/configure-db.sh
+      - /mssql/configure-db.sh
+    overrides:
+      volumes:
+        - ~/.lando/mssql:/mssql
+tooling:
+  composer:
+    service: appserver
+    cmd: composer
+events:
+  pre-start:
+  - appserver: composer require drupal/sqlsrv
+```
+
 ## Some sources
 
 * <https://github.com/lando/mssql/issues/36>
