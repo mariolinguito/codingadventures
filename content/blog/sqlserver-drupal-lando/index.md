@@ -312,7 +312,7 @@ Now you can run your `lando start` or `lando rebuild` to bootstrap everything an
 
 In the end, I need to say that this is not the best approach ever, but it can be a starting point to make something greater than this.
 
-So, I hope that this mini-tutorial article can help you in the fight against SQL-Server \[we are joking! Microsoft a lot of thanks for WSL! :-]
+However, I hope that this mini-tutorial article can help you in the fight against SQL-Server \[we are joking! Microsoft a lot of thanks for WSL! :-]
 
 At the bottom, there are some sources that you can read to clarify your idea about this topic.
 
