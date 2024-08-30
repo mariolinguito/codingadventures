@@ -269,6 +269,35 @@ else
 fi
 ```
 
+Let me explain some pieces of the code \[at least the darkest ones]:
+
+```shell
+if [ -f /mssql/env/.lando.env ]; then
+    echo "Loading environment variables from .lando.env"
+    set -a
+    . /mssql/env/.lando.env
+    set +a
+    echo "Environment variables loaded."
+else
+    echo ".lando.env file not found."
+fi
+```
+
+The purpose of this section is to check if the file **/mssql/env/.lando.env** exists. If the file exists, it loads environment variables from **.lando.env**. While `set -a` tells the shell to automatically export all variables, making them available to the script. On the other hand, `set +a` stops exporting all variables automatically after the file is sourced. If the file is not found, it prints a message indicating that the file is missing.
+
+```shell
+folder_path="/mssql/init/"
+
+if [ -n "$(ls -A "$folder_path")" ] && [ -z "$(ls -A "$folder_path" | grep -v '^init\.bak$')" ]; then
+    echo "Executing restore of BAK databases..."
+    sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "RESTORE DATABASE $MSSQL_DBNAME FROM DISK = '/mssql/init/init.bak' WITH MOVE '$MSSQL_DBDATA' TO '/var/opt/mssql/data/lando_data.mdf', MOVE '$MSSQL_DBLOG' TO '/var/opt/mssql/data/lando_log.ldf', NOUNLOAD, REPLACE;"
+else
+    echo "Folder is not full of init.bak files or is empty."
+fi
+```
+
+The purpose of this section is to check the **/mssql/init/** folder for any files and ensure they are named **init.bak**. If the folder contains only init.bak files, it proceeds to restore the database from the backup file. The `RESTORE DATABASE` command restores the database, moving the data and log files to the specified paths. If the folder is empty or contains files other than init.bak, it skips the restoration process.
+
 
 
 ## Some sources
