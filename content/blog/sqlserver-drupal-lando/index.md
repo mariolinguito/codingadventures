@@ -127,7 +127,7 @@ services:
 
 But it is not so easy. You need to configure something to make this work well.
 
-1. SQL-Server changed the directory of the bin of **sqlcmd** \[the old directory is: /opt/mssql-tools/bin, while the new is: /opt/mssql-tools18/bin];
+1. SQL-Server changed the directory of the bin of **sqlcmd** [the old directory is: */opt/mssql-tools/bin*, while the new is: */opt/mssql-tools18/bin*];
 2. To use SQL-Server with Drupal, again, you need two PHP extensions: **sqlsrv** and **pdo_sqlsrv**; this means that you need to install them on your appserver service. Thanks to an issue reported by a user called mikemilano we can make that;
 3. We need to automate some boring stuff, like the import of a database with BAK init file and some like this \[I make a script that can help us];
 
