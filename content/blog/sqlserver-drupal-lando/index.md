@@ -192,6 +192,7 @@ Again, using overrides we mount the *~/.lando/mssql* directory from your local m
 In this folder, we have:
 
 ```shell
+.mssql
 │
 ├── configure-db.sh
 ├── env
