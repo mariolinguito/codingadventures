@@ -247,13 +247,13 @@ sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "IF NOT EXISTS (SELECT * FROM sy
 sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "CREATE LOGIN $MSSQL_USERNAME WITH PASSWORD = '$MSSQL_PASSWORD'"
 
 # Create a login for specific database.
-sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "USE $MSSQL_DBNAME; CREATE USER $MSSQL_USERNAME FOR LOGIN $MSSQL_USERNAME"
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "CREATE USER $MSSQL_USERNAME FOR LOGIN $MSSQL_USERNAME"
 
 # Assign role to database.
-sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "USE $MSSQL_DBNAME; ALTER ROLE db_owner ADD MEMBER $MSSQL_USERNAME"
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "ALTER ROLE db_owner ADD MEMBER $MSSQL_USERNAME"
 
 # Set autoclose for the database.
-sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "USE $MSSQL_DBNAME; ALTER DATABASE $MSSQL_DBNAME SET AUTO_CLOSE OFF"
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "ALTER DATABASE $MSSQL_DBNAME SET AUTO_CLOSE OFF"
 
 # Define the folder path
 folder_path="/mssql/init/"
@@ -297,6 +297,12 @@ fi
 ```
 
 The purpose of this section is to check the **/mssql/init/** folder for any files and ensure they are named **init.bak**. If the folder contains only init.bak files, it proceeds to restore the database from the backup file. The `RESTORE DATABASE` command restores the database, moving the data and log files to the specified paths. If the folder is empty or contains files other than init.bak, it skips the restoration process.
+
+In the middle part of the script, we create the user \[with the password] that is specified by environment variables and give it the privileges on the database.
+
+To test our new user, we can use DBeaver [[here](https://dbeaver.io/) the official page]:
+
+
 
 ## Conclusions
 
