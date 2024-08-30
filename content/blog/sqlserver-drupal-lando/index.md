@@ -167,10 +167,8 @@ services:
       - '/sbin'
       - '/bin'
       - '/opt/mssql-tools18/bin'
-
-# NOT USED ANYMORE.
-#   version: '2019-latest'
-
+ 
+    version: '2019-latest'
     portforward: 10433
     run_as_root:
       - chmod +x /mssql/configure-db.sh
