@@ -201,7 +201,7 @@ In this folder, we have:
     └── init.bak
 ```
 
-In particular, we have: 2 directories and 3 files.
+In particular, we have 2 directories and 3 files.
 
 ### Environment variables:
 
@@ -342,7 +342,7 @@ However, I hope that this mini-tutorial article can help you in the fight agains
 
 At the bottom, there are some sources that you can read to clarify your idea about this topic.
 
-## Some sources
+## Some sources that can help you
 
 * <https://github.com/lando/mssql/issues/36>
 * <https://github.com/lando/lando/issues/1796>
