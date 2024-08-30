@@ -185,6 +185,12 @@ events:
   - appserver: composer require drupal/sqlsrv
 ```
 
+
+
+If you are looking at **lines 37 to 42**, let me explain. I need a method to create a user \[different from sa] and give some privileges. Again, I want to make this using environment variables.
+
+
+
 ## Some sources
 
 * <https://github.com/lando/mssql/issues/36>
