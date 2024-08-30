@@ -114,3 +114,23 @@ hooks:
    * `post-import`: commands to run after importing a database or other data.
 
 If you want to make this in pure Docker, ehm, it will be very complex!
+
+## Use MSSQL in a Lando configuration file
+
+Following Lando configuration, if you want to use the MSSQL plugin you just use it like this:
+
+```yaml
+services:
+  myservice:
+    type: mssql
+```
+
+But it is not so easy. You need to configure something to make this work well.
+
+1. SQL-Server changed the directory of the bin of **sqlcmd** \[the old directory: /opt/mssql-tools/bin, while the new: /opt/mssql-tools18/bin];
+2.
+
+## Some sources
+
+* <https://github.com/lando/mssql/issues/36>
+* <https://github.com/lando/lando/issues/1796>
