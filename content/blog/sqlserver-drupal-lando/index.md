@@ -189,7 +189,7 @@ events:
 
 If you are looking at **lines 37 to 42**, let me explain. I need a method to create a user \[different from sa] and give some privileges. Again, I want to make this using environment variables.
 
-Using overrides we mount the *~/.lando/mssql* directory from your local machine into the */mssql* directory inside the container. This means that any files in *~/.lando/mssql* on your host machine will be accessible in the container at the */mssql* path.
+Again, using overrides we mount the *~/.lando/mssql* directory from your local machine into the */mssql* directory inside the container. This means that any files in *~/.lando/mssql* on your host machine will be accessible in the container at the */mssql* path.
 
 In this folder, we have:
 
