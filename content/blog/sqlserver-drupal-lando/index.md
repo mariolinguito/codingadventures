@@ -201,7 +201,7 @@ In this folder, we have:
     └── init.bak
 ```
 
-In particular: 2 directories and 3 files.
+In particular, we have: 2 directories and 3 files.
 
 ### Environment variables:
 
