@@ -215,7 +215,7 @@ You can change them and add your env variables based on your needs and your appl
 
 In the folder called **init**,we can put a BAK file that we want to import during the Lando bootstrap of the project [of course, we need to set some variables to make this, and in particular the **MSSQL_DBDATA** and **MSSQL_DBLOG** if necessary and restoring process requires them].
 
-Note that the name of the BAK needs to be **init.bak** to make the script work well.
+Note that the name of the BAK needs to be **init.bak** to make the script work well \[you will see now why].
 
 ### The real script:
 
