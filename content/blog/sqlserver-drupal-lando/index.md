@@ -271,7 +271,7 @@ else
 fi
 ```
 
-Okay, all goods, but let me explain some pieces of the code \[at least the darkest ones]:
+Okay, all good, but let me explain some pieces of the code \[at least the darkest ones]:
 
 ```shell
 if [ -f /mssql/env/.lando.env ]; then
