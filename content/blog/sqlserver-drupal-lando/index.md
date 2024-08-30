@@ -195,6 +195,8 @@ In this folder, we have:
 
 ![Structure of folder mssql](screenshot-2024-08-30-210502.png "Structure of folder mssql")
 
+### Environment variables:
+
 Following the structure shown, in the env directory, we have a specific env file in which we can write all environment variables we need, like this:
 
 ```yaml
@@ -207,7 +209,9 @@ MSSQL_DBDATA=drupal10_Data
 MSSQL_DBLOG=drupal10_Log
 ```
 
+### Initializing the database with BAK:
 
+In the folder called **init**,we can put a BAK file that we want to import during the Lando bootstrap of the project [of course, we need to set some variables to make this, and in particular the **MSSQL_DBDATA** and **MSSQL_DBLOG** if necessary].
 
 ## Some sources
 
