@@ -117,7 +117,7 @@ If you want to make this in pure Docker, ehm, it will be very complex!
 
 ## Use MSSQL in a Lando configuration file
 
-Following Lando configuration, if you want to use the MSSQL plugin you just use it like this:
+Following Lando documentation, if you want to use the MSSQL plugin you just use it like this:
 
 ```yaml
 services:
