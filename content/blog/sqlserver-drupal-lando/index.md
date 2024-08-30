@@ -209,6 +209,8 @@ MSSQL_DBDATA=drupal10_Data
 MSSQL_DBLOG=drupal10_Log
 ```
 
+You can change them and add your env variables based on your needs and your application.
+
 ### Initializing the database with BAK:
 
 In the folder called **init**,we can put a BAK file that we want to import during the Lando bootstrap of the project [of course, we need to set some variables to make this, and in particular the **MSSQL_DBDATA** and **MSSQL_DBLOG** if necessary].
