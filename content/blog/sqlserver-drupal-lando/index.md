@@ -285,7 +285,9 @@ else
 fi
 ```
 
-The purpose of this section is to check if the file **/mssql/env/.lando.env** exists. If the file exists, it loads environment variables from **.lando.env**. While `set -a` tells the shell to automatically export all variables, making them available to the script. On the other hand, `set +a` stops exporting all variables automatically after the file is sourced. If the file is not found, it prints a message indicating that the file is missing.
+The purpose of this section is to check if the file **/mssql/env/.lando.env** exists. If the file exists, it loads environment variables from **.lando.env**. While `set -a` tells the shell to automatically export all variables, making them available to the script. On the other hand, `set +a` stops exporting all variables automatically after the file is sourced. 
+
+If the file is not found, it prints a message indicating that the file is missing.
 
 ```shell
 folder_path="/mssql/init/"
@@ -298,7 +300,9 @@ else
 fi
 ```
 
-The purpose of this section is to check the **/mssql/init/** folder for any files and ensure they are named **init.bak**. If the folder contains only init.bak files, it proceeds to restore the database from the backup file. The `RESTORE DATABASE` command restores the database, moving the data and log files to the specified paths. If the folder is empty or contains files other than init.bak, it skips the restoration process.
+The purpose of this section is to check the **/mssql/init/** folder for any files and ensure they are named **init.bak**. If the folder contains only init.bak files, it proceeds to restore the database from the backup file. The `RESTORE DATABASE` command restores the database, moving the data and log files to the specified paths.
+
+ If the folder is empty or contains files other than init.bak, it skips the restoration process.
 
 In the middle part of the script, we create the user \[with the password] that is specified by environment variables and give it the privileges on the database.
 
