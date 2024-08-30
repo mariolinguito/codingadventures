@@ -203,7 +203,7 @@ Following the structure shown, in the env directory, we have a specific env file
 # MSSQL envs.
 #
 MSSQL_USERNAME=drupal10
-MSSQL_PASSWORD=ZsL82kbn
+MSSQL_PASSWORD=ZsL82^kbn
 MSSQL_DBNAME=drupal10
 MSSQL_DBDATA=drupal10_Data
 MSSQL_DBLOG=drupal10_Log
