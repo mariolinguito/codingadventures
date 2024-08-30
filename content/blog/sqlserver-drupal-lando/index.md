@@ -213,6 +213,64 @@ MSSQL_DBLOG=drupal10_Log
 
 In the folder called **init**,we can put a BAK file that we want to import during the Lando bootstrap of the project [of course, we need to set some variables to make this, and in particular the **MSSQL_DBDATA** and **MSSQL_DBLOG** if necessary].
 
+Note that the name of the BAK needs to be **init.bak** to make the script work well.
+
+### The real script:
+
+```shell
+#!/bin/bash
+
+# Source the .lando.env file to load environment variables.
+if [ -f /mssql/env/.lando.env ]; then
+    echo "Loading environment variables from .lando.env"
+    set -a
+    . /mssql/env/.lando.env
+    set +a
+    echo "Environment variables loaded."
+else
+    echo ".lando.env file not found."
+fi
+
+# Use the environment variables.
+echo "Reading ENV variables..."
+echo "*************************"
+echo "DB user: $MSSQL_USERNAME"
+echo "DB name: $MSSQL_DBNAME"
+echo "DB data: $MSSQL_DBDATA"
+echo "DB log: $MSSQL_DBLOG"
+echo "*************************"
+
+# Create a new database on lando rebuild.
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = '$MSSQL_DBNAME') BEGIN CREATE DATABASE $MSSQL_DBNAME; END"
+
+# Create user and password.
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "CREATE LOGIN $MSSQL_USERNAME WITH PASSWORD = '$MSSQL_PASSWORD'"
+
+# Create a login for specific database.
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "USE $MSSQL_DBNAME; CREATE USER $MSSQL_USERNAME FOR LOGIN $MSSQL_USERNAME"
+
+# Assign role to database.
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "USE $MSSQL_DBNAME; ALTER ROLE db_owner ADD MEMBER $MSSQL_USERNAME"
+
+# Set autoclose for the database.
+sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "USE $MSSQL_DBNAME; ALTER DATABASE $MSSQL_DBNAME SET AUTO_CLOSE OFF"
+
+# Define the folder path
+folder_path="/mssql/init/"
+
+# Check if the folder contains only files named init.bak
+if [ -n "$(ls -A "$folder_path")" ] && [ -z "$(ls -A "$folder_path" | grep -v '^init\.bak$')" ]; then
+    # All files are named init.bak, execute your command here
+    echo "Executing restore of BAK databases..."
+    # Replace the following line with the command you want to execute
+    sqlcmd -U sa -H sqlserver -P $SA_PASSWORD -C -Q "RESTORE DATABASE $MSSQL_DBNAME FROM DISK = '/mssql/init/init.bak' WITH MOVE '$MSSQL_DBDATA' TO '/var/opt/mssql/data/lando_data.mdf', MOVE '$MSSQL_DBLOG' TO '/var/opt/mssql/data/lando_log.ldf', NOUNLOAD, REPLACE;"
+else
+    echo "Folder is not full of init.bak files or is empty."
+fi
+```
+
+
+
 ## Some sources
 
 * <https://github.com/lando/mssql/issues/36>
