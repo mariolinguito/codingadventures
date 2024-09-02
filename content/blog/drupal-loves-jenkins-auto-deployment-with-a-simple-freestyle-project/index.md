@@ -37,7 +37,7 @@ As in every thriller story, the butler is the kidnapper... I'm kidding now, inst
 
 After the starting of the Jenkins service, we will redirect to the installation page; after the installation process, we can use the main dashboard. Using this dashboard we can start with a new project (I choose a freestyle project) and put some basic configurations like the repository URL and the branch to monitor.
 
-![My Jenkins project configuration](screenshot-2021-11-22-at-15-05-08-drupal9-config-jenkins-.png "My Jenkins project configuration")
+![My Jenkins project configuration](screenshot-2021-11-22-at-15-05-08-drupal9-config-jenkins.png "My Jenkins project configuration")
 
 As you can see, there are a lot of things (including variables that I can use into my script and credentials that I can use to connect Jenkins and Github), and in particular, in the action to do for the job I put my script for Drupal deployment. 
 
